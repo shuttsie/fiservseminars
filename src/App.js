@@ -33,7 +33,6 @@ const App = () => {
             <Route path="http://virtualtrainer.fiservapps.com/TrainGuides/2020/2020_EducationSeminar_Precision_OverviewandAgenda.pdf" />
             <Route path="/faqs" component={SimpleAccordion} />
             <Route path="/contact-us" component={Contact} />
-            {/* <Route path="/external-api" component={ExternalApi} /> */}
           </Switch>
         </Container>
         <Footer />
