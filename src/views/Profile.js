@@ -32,7 +32,7 @@ export const ProfileComponent = () => {
           <p className="lead text-muted">{user.email}</p>
         </Col>
       </Row>
-      <Row>
+      {/* <Row>
         <Col>
           <label>Username:</label>
           <input label="username" type="text" readyonly value="johndoe1"></input>
@@ -43,7 +43,7 @@ export const ProfileComponent = () => {
           <label>Bank Name:</label>
           <input label="bankname" type="text" readonly value="Bank of Fiserv"></input>
         </Col>   
-      </Row>
+      </Row> */}
     </Container>
   );
 };
