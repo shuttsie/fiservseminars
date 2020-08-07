@@ -2,13 +2,13 @@ import React from 'react';
 import { Router, Route, Switch } from "react-router-dom";
 import { Container } from "reactstrap";
 
-import Loading from "./components/Loading";
 import NavBar from "./components/NavBar";
 import Footer from "./components/Footer";
+import SimpleAccordion from "./components/FAQ";
+import Contact from "./components/Contact";
+import DatesLocations from "./components/DatesLocations";
 import Home from "./views/Home";
 import Profile from "./views/Profile";
-import ExternalApi from "./views/ExternalApi";
-import { useAuth0 } from "@auth0/auth0-react";
 import history from "./utils/history";
 
 // styles
@@ -20,15 +20,6 @@ import initFontAwesome from "./utils/initFontAwesome";
 initFontAwesome();
 
 const App = () => {
-  const { isLoading, error } = useAuth0();
-
-  if (error) {
-    return <div>Oops... {error.message}</div>;
-  }
-
-  if (isLoading) {
-    return <Loading />;
-  }
 
   return (
     <Router history={history}>
@@ -38,7 +29,11 @@ const App = () => {
           <Switch>
             <Route path="/" exact component={Home} />
             <Route path="/profile" component={Profile} />
-            <Route path="/external-api" component={ExternalApi} />
+            <Route path="/dates-and-locations" component={DatesLocations} />
+            <Route path="http://virtualtrainer.fiservapps.com/TrainGuides/2020/2020_EducationSeminar_Precision_OverviewandAgenda.pdf" />
+            <Route path="/faqs" component={SimpleAccordion} />
+            <Route path="/contact-us" component={Contact} />
+            {/* <Route path="/external-api" component={ExternalApi} /> */}
           </Switch>
         </Container>
         <Footer />

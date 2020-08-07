@@ -41,14 +41,40 @@ const NavBar = () => {
         <Container>
           <a href="/"><NavbarBrand className="logo" /></a>
           <NavLink
-            href="http://www.cvent.com/events/precision-education-seminar-kansas-city/custom-19-21922ee8971e4a55817308085ca00ad0.aspx?tw=89-35-A4-21-E8-C3-DD-48-00-E5-35-2E-74-C4-A8-C8"
+            // href="http://localhost:3000"
+            href="https://fiservseminars/premier"
+            exact
+            activeClassName="router-link-exact-active"
+          >
+            Welcome
+          </NavLink>
+          <NavLink
+            // href="http://localhost:3000/dates-and-locations"
+            href="https://fiservseminars/premier/dates-and-locations"
+            exact
+            activeClassName="router-link-exact-active"
+          >
+            Dates &amp; Locations
+          </NavLink>
+          <NavLink
+            href="http://virtualtrainer.fiservapps.com/TrainGuides/2020/2020_EducationSeminar_Premier_OverviewandAgenda.pdf"
+            target="_blank"
+            exact
+            activeClassName="router-link-exact-active"
+          >
+            Agenda
+          </NavLink>
+          <NavLink
+            // href="http://localhost:3000/faqs"
+            href="https://fiservseminars/premier/faqs"
             exact
             activeClassName="router-link-exact-active"
           >
             FAQs
           </NavLink>
           <NavLink
-            href="http://www.cvent.com/events/precision-education-seminar-kansas-city/custom-20-21922ee8971e4a55817308085ca00ad0.aspx?tw=89-35-A4-21-E8-C3-DD-48-00-E5-35-2E-74-C4-A8-C8"
+            // href="http://localhost:3000/contact-us"
+            href="https://fiservseminars/premier/contact-us"
             exact
             activeClassName="router-link-exact-active"
           >
@@ -80,7 +106,7 @@ const NavBar = () => {
                     className="btn-margin"
                     onClick={() => loginWithRedirect()}
                   >
-                    Sign Up
+                    Sign In
                   </Button>
                 </NavItem>
               )}

@@ -14,6 +14,7 @@ export const ProfileComponent = () => {
           id="earlyreg-btn"
           color="primary"
           className="btn-margin"
+          disabled
         >
         Edit Profile
       </Button>

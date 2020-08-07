@@ -1,9 +1,9 @@
 const Seminars = [
   {
-    date: "October 6-8",
+    date: "October 21-23",
   },
   {
-    date: "October 14-16",
+    date: "Novemeber 17-19",
   }
 ];
 

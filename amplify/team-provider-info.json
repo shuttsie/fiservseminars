@@ -1,0 +1,15 @@
+{
+    "dev": {
+        "awscloudformation": {
+            "AuthRoleName": "amplify-seminarsignup-dev-110446-authRole",
+            "UnauthRoleArn": "arn:aws:iam::741744866214:role/amplify-seminarsignup-dev-110446-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::741744866214:role/amplify-seminarsignup-dev-110446-authRole",
+            "Region": "us-east-2",
+            "DeploymentBucketName": "amplify-seminarsignup-dev-110446-deployment",
+            "UnauthRoleName": "amplify-seminarsignup-dev-110446-unauthRole",
+            "StackName": "amplify-seminarsignup-dev-110446",
+            "StackId": "arn:aws:cloudformation:us-east-2:741744866214:stack/amplify-seminarsignup-dev-110446/628f04c0-d735-11ea-8ce6-06c94a3c6390",
+            "AmplifyAppId": "dg3d2zhhpc1pp"
+        }
+    }
+}
