@@ -33,9 +33,6 @@ const HeroInfo = () => (
             </li>
          </ul>
       </div>
-      <div className="hero-sidebar">
-         <Sidebar/>
-      </div>
    </div>
   );
   
