@@ -53,7 +53,7 @@ export default function SimpleAccordion() {
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
-            We are better together! Join online as peers and Fiserv expoerts share insightful presentations and discussions that will increase your organizational efficiency. Learn more about the software you use every day while building a wide network of business relationships.
+            We are better together! Join online as peers and Fiserv experts share insightful presentations and discussions that will increase your organizational efficiency. Learn more about the software you use every day while building a wide network of business relationships.
           </Typography>
         </AccordionDetails>
       </Accordion>
@@ -67,7 +67,7 @@ export default function SimpleAccordion() {
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
-            For you convenience - and to maximize the potential for your team to enhance their knowledge - we are offering each virtual session twice, once from <b>8 a.m. - 12 p.m. Central Time</b> and a repeat session from <b>1 p.m. -  p.m. Central Time</b>.
+            For your convenience and to maximize the potential for your team to enhance their knowledge, we are offering each virtual session twice, once from <b>8 a.m. - 12 p.m. Central Time</b> and a repeat session from <b>1 p.m. - 5 p.m. Central Time</b>.
             <div className="seminar-rows faq">
                 <Row className="d-flex justify-content-between col">
                     {Seminars.map((col, i) => (
@@ -165,13 +165,10 @@ export default function SimpleAccordion() {
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
-            There are two types of discounts available. Early Bird registration and Premier Client Event Package
+            There is one type of discount available. Early Bird registration
             <ul>
                 <li>
                     Early Bird registration: Register by August 31 and recieve a $50 discount
-                </li>
-                <li>
-                    Premier Client Event Package: If you have subscribed to the Premier Client Event Package, you are eligible to recieve 1 free attendee for the Premier Eduction Seminar.
                 </li>
             </ul>
           </Typography>
