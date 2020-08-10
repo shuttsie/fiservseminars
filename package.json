@@ -3,17 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "start": "npm-run-all --parallel spa api-server",
+    "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test --env=jest-environment-jsdom-sixteen",
-    "eject": "react-scripts eject",
-    "spa": "react-scripts start",
-    "server": "node server.js",
-    "server:dev": "nodemon server.js",
-    "api-server": "node api-server.js",
-    "api-server:dev": "nodemon api-server.js",
-    "dev": "npm-run-all --parallel spa api-server:dev",
-    "prod": "npm-run-all --parallel server api-server"
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
   },
   "dependencies": {
     "@auth0/auth0-react": "^1.0.0",
@@ -53,17 +46,10 @@
     "redux": "^4.0.5",
     "semantic-ui-react": "^1.0.0"
   },
-  "devDependencies": {
-    "@testing-library/jest-dom": "^5.10.1",
-    "@testing-library/react": "^10.3.0",
-    "jest-environment-jsdom-sixteen": "^1.0.3",
-    "jest-fetch-mock": "^3.0.3",
-    "nodemon": "^2.0.4"
-  },
+  "devDependencies": {},
   "eslintConfig": {
     "extends": "react-app"
   },
-  "homepage": ".",
   "browserslist": {
     "production": [
       ">0.2%",
