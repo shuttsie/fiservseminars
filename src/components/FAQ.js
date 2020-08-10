@@ -102,7 +102,7 @@ export default function SimpleAccordion() {
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
-            You will recieve an email approximately 3 days prior to the start date with a link to the guides. Guides will also be available in the Resource Center int he virtual environment the days of the event.
+            You will recieve an email approximately 3 days prior to the start date with a link to the guides. Guides will also be available in the Resource Center in the virtual environment the days of the event.
           </Typography>
         </AccordionDetails>
       </Accordion>
