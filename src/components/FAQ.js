@@ -53,7 +53,7 @@ export default function SimpleAccordion() {
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
-            We are better together! Join online as peers and Fiserv expoerts share insightful presentations and discussions that will increase your organizational efficiency. Learn more about the software you use every day while building a wide network of business relationships.
+            We are better together! Join online as peers and Fiserv experts share insightful presentations and discussions that will increase your organizational efficiency. Learn more about the software you use every day while building a wide network of business relationships.
           </Typography>
         </AccordionDetails>
       </Accordion>
