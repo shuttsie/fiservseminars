@@ -42,7 +42,7 @@ const NavBar = () => {
           <a href="/"><NavbarBrand className="logo" /></a>
           <NavLink
             // href="http://localhost:3000"
-            href="https://fiservseminars.com/precision"
+            href="https://precision.fiservseminars.com"
             exact
             activeClassName="router-link-exact-active"
           >
