@@ -15,7 +15,7 @@ class Content extends Component {
           Review the agenda, then <a href="http://www.cvent.com/d/lhq4sj/2K">Register</a> to select your preferred date(s).
           </p>
           <p>
-            For you convenience - and to maximize the potential for your team to enhance their knowledge - we are offering each session twice, once from <b>8 a.m. - 12 p.m. Central Time</b> and a repeat session from <b>1 p.m. -  p.m. Central Time</b>.
+            For you convenience - and to maximize the potential for your team to enhance their knowledge - we are offering each session twice, once from <b>8 a.m. - 12 p.m. Central Time</b> and a repeat session from <b>1 p.m. - 5 p.m. Central Time</b>.
           </p>
         <div className="seminar-rows">
           <Row className="d-flex justify-content-between">
