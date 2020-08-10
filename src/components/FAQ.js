@@ -67,7 +67,7 @@ export default function SimpleAccordion() {
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
-            For you convenience - and to maximize the potential for your team to enhance their knowledge - we are offering each virtual session twice, once from <b>8 a.m. - 12 p.m. Central Time</b> and a repeat session from <b>1 p.m. - 5 p.m. Central Time</b>.
+            For your convenience and to maximize the potential for your team to enhance their knowledge, we are offering each virtual session twice, once from <b>8 a.m. - 12 p.m. Central Time</b> and a repeat session from <b>1 p.m. - 5 p.m. Central Time</b>.
             <div className="seminar-rows faq">
                 <Row className="d-flex justify-content-between col">
                     {Seminars.map((col, i) => (
