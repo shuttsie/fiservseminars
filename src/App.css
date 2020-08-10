@@ -214,3 +214,7 @@ footer a, footer a:hover {
 #external-api {
   display:none;
 }
+
+.app-logo {
+  background-size:contain;
+}

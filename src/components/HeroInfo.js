@@ -1,5 +1,4 @@
 import React from "react";
-import Sidebar from "./Sidebar";
 
 const HeroInfo = () => (
    <div className="hero-container">
@@ -32,9 +31,6 @@ const HeroInfo = () => (
                </ul>
             </li>
          </ul>
-      </div>
-      <div className="hero-sidebar">
-         <Sidebar/>
       </div>
    </div>
   );
