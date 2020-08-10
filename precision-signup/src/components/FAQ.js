@@ -27,9 +27,9 @@ export default function SimpleAccordion() {
   return (
     <div className={classes.root}>
     <h1>Frequently Asked Questions</h1>
-    <h2 className="section-header">Premier</h2>
+    <h2 className="section-header">Precision</h2>
     <p>
-        This fall, the Premier Education Seminars are three days of interactive sessions that provide the ideal setting to gain new perspectives and make valuable connections with peers and Fiserv experts. During the three days you will experience Simulive training event, OnDemand recordings including a look into the new UI and NextGen, a virtual social hour, a chance to win awesome prizes, a few special video surprises and access to the electronic version of the meeting materials.
+        This fall, the Precision Education Seminars are three days of interactive sessions that provide the ideal setting to gain new perspectives and make valuable connections with peers and Fiserv experts. During the three days you will experience Simulive training event, OnDemand recordings including a look into the new UI and NextGen, a virtual social hour, a chance to win awesome prizes, a few special video surprises and access to the electronic version of the meeting materials.
     </p>
     <br/>
       <Accordion>
@@ -168,13 +168,13 @@ export default function SimpleAccordion() {
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
-            There are two types of discounts available. Early Bird registration and Premier Client Event Package
+            There are two types of discounts available. Early Bird registration and Precision Client Event Package
             <ul>
                 <li>
                     Early Bird registration: Register by August 31 and recieve a $50 discount
                 </li>
                 <li>
-                    Premier Client Event Package: If you have subscribed to the Premier Client Event Package, you are eligible to recieve 1 free attendee for the Premier Eduction Seminar.
+                    Precision Client Event Package: If you have subscribed to the Precision Client Event Package, you are eligible to recieve 1 free attendee for the Precision Eduction Seminar.
                 </li>
             </ul>
           </Typography>

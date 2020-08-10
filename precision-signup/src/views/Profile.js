@@ -30,6 +30,8 @@ export const ProfileComponent = () => {
         <Col md>
           <h2>{user.name}</h2>
           <p className="lead text-muted">{user.email}</p>
+          <p className="lead text-muted">{user.bank_name}</p>
+          <p className="lead text-muted">{user.bank_title}</p>
         </Col>
       </Row>
       {/* <Row>
