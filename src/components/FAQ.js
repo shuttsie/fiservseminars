@@ -28,9 +28,6 @@ export default function SimpleAccordion() {
     <div className={classes.root}>
     <h1>Frequently Asked Questions</h1>
     <h2 className="section-header">Premier</h2>
-    <p>
-        This fall, the Premier Education Seminars are three days of interactive sessions that provide the ideal setting to gain new perspectives and make valuable connections with peers and Fiserv experts. During the three days you will experience Simulive training event, OnDemand recordings including a look into the new UI and NextGen, a virtual social hour, a chance to win awesome prizes, a few special video surprises and access to the electronic version of the meeting materials.
-    </p>
     <br/>
       <Accordion>
         <AccordionSummary
