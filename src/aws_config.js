@@ -9,12 +9,12 @@ const aws_config = {
   "aws_user_pools_id": "us-east-2_uPcjDmu9S",
   "aws_user_pools_web_client_id": "5bssdmc5lretpto16sq4d0fgd0",
 "oauth": {
-  "domain": "precision-seminar.auth.us-east-2.amazoncognito.com",
+  "domain": "premier-seminar.auth.us-east-2.amazoncognito.com",
   "scope": ["email", "profile", "openid"],
   "redirectSignIn": 'http://localhost:3000',
   "redirectSignOut": 'http://localhost:3000',
   "responseType": "code",
-  "auth0_identity_provider": "PrecisionSeminar"
+  "auth0_identity_provider": "PremierSeminar"
 }
 }
 

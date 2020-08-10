@@ -30,7 +30,7 @@ const App = () => {
             <Route path="/" exact component={Home} />
             <Route path="/profile" component={Profile} />
             <Route path="/dates-and-locations" component={DatesLocations} />
-            <Route path="http://virtualtrainer.fiservapps.com/TrainGuides/2020/2020_EducationSeminar_Precision_OverviewandAgenda.pdf" />
+            <Route path="http://virtualtrainer.fiservapps.com/TrainGuides/2020/2020_EducationSeminar_Premier_OverviewandAgenda.pdf" />
             <Route path="/faqs" component={SimpleAccordion} />
             <Route path="/contact-us" component={Contact} />
           </Switch>
