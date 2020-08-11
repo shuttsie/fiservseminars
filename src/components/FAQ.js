@@ -67,7 +67,7 @@ export default function SimpleAccordion() {
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
-            For your convenience and to maximize the potential for your team to enhance their knowledge, we are offering each virtual session twice, once from <b>8 a.m. - 12 p.m. Central Time</b> and a repeat session from <b>1 p.m. - 5 p.m. Central Time</b>.
+            For your convenience and to maximize the potential for your team to enhance their knowledge, we are offering each Simulive session twice, once from <b>8 a.m. - 12 p.m. Central Time</b> and a repeat session from <b>1 p.m. - 5 p.m. Central Time</b>.
             <div className="seminar-rows faq">
                 <Row className="d-flex justify-content-between col">
                     {Seminars.map((col, i) => (
@@ -124,15 +124,15 @@ export default function SimpleAccordion() {
                     <li>Early registration fee through August 31: 
                     <ul>
                         <li>$450 per connection</li>
-                        <li>$850 for <b>2</b> connections - *Recordings included</li> 
+                        <li>$850 for <b>2</b> connections - *SimuLive and OnDemand Recordings available through December 31, 2020</li> 
                     </ul>
                     </li>
                     <br />
                     <li>Standard registration fee after August 31:
                     <ul>
                         <li>$500 per connection</li>
-                        <li>$950 for <b>2</b> connections - *Recordings included</li>
-                        <li>$1,750 for <b>3</b> connections - *Recordings included</li>
+                        <li>$950 for <b>2</b> connections - *SimuLive and OnDemand Recordings available through December 31, 2020</li>
+                        <li>$1,750 for <b>3 or more</b> connections - *SimuLive and OnDemand Recordings available through December 31, 2020</li>
                     </ul>
                     </li>
                 </ul>

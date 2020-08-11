@@ -50,11 +50,11 @@ const NavBar = () => {
           </NavLink>
           <NavLink
             // href="http://localhost:3000/dates-and-locations"
-            href="https://premier.fiservseminars.com/dates-and-locations"
+            href="https://premier.fiservseminars.com/dates"
             exact
             activeClassName="router-link-exact-active"
           >
-            Dates &amp; Locations
+            Dates
           </NavLink>
           <NavLink
             href="http://virtualtrainer.fiservapps.com/TrainGuides/2020/2020_EducationSeminar_Premier_OverviewandAgenda.pdf"
