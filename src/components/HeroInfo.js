@@ -16,7 +16,7 @@ const HeroInfo = () => (
          </p>
       <h3>Seminar Fees</h3>
          <ul>
-            <li>Early registration fee through August 31: 
+            <li>Early registration fee through September 11: 
                <ul>
                   <li>$450 per connection</li>
                   <li>$850 for <b>2</b> connections - *SimuLive and OnDemand Recordings available through December 31, 2020</li> 
