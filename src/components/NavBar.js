@@ -150,7 +150,7 @@ const NavBar = () => {
                     block
                     onClick={() => loginWithRedirect({})}
                   >
-                    Log in
+                    Register
                   </Button>
                 </NavItem>
               </Nav>

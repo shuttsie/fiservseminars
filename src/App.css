@@ -220,3 +220,7 @@ footer a, footer a:hover {
   max-width:964px;
   width:100%;
 }
+
+.d-flex {
+  display: block !important;
+}
