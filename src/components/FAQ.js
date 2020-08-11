@@ -67,7 +67,7 @@ export default function SimpleAccordion() {
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
-            For your convenience and to maximize the potential for your team to enhance their knowledge, we are offering each virtual session twice, once from <b>8 a.m. - 12 p.m. Central Time</b> and a repeat session from <b>1 p.m. - 5 p.m. Central Time</b>.
+            For your convenience and to maximize the potential for your team to enhance their knowledge, we are offering each Simulive session twice, once from <b>8 a.m. - 12 p.m. Central Time</b> and a repeat session from <b>1 p.m. - 5 p.m. Central Time</b>.
             <div className="seminar-rows faq">
                 <Row className="d-flex justify-content-between col">
                     {Seminars.map((col, i) => (
@@ -124,17 +124,17 @@ export default function SimpleAccordion() {
                     <li>Early registration fee through August 31: 
                     <ul>
                         <li>$450 per connection</li>
-                        <li>$850 for <b>2</b> connections - *Recordings included</li> 
+                        <li>$850 for <b>2</b> connections - *SimuLive and OnDemand Recordings available through December 31, 2020</li> 
                     </ul>
-                    </li>
-                    <br />
-                    <li>Standard registration fee after August 31:
+                  </li>
+                  <br />
+                  <li>Standard registration fee after August 31:
                     <ul>
                         <li>$500 per connection</li>
-                        <li>$950 for <b>2</b> connections - *Recordings included</li>
-                        <li>$1,750 for <b>3</b> connections - *Recordings included</li>
+                        <li>$950 for <b>2</b> connections - *SimuLive and OnDemand Recordings available through December 31, 2020</li>
+                        <li>$1,750 for <b>3</b> or more connections - *SimuLive and OnDemand Recordings available through December 31, 2020</li>
                     </ul>
-                    </li>
+                  </li>
                 </ul>
             <p>This fee includes particpation in the Simulive training event, OnDemand recordings, a virtual social hour, a chance to win awesome prizes, a few special video surprises and access to the eletronic version of the meeting materials.</p>
             <p>Registrations are subject to the cancellation policy provided at the beginning of the registration page.</p>
@@ -171,7 +171,7 @@ export default function SimpleAccordion() {
                     Early Bird registration: Register by August 31 and recieve a $50 discount
                 </li>
                 <li>
-                    Precision Client Event Package: If you have subscribed to the Precision Client Event Package, you are eligible to recieve 1 free attendee for the Precision Eduction Seminar.
+                    Precision Client Event Package: If you have subscribed to the Precision Client Event Package, you are eligible to recieve 1 free attendee for the Precision Eduction Seminar. You also recieve <b>3 free connections</b>.
                 </li>
             </ul>
           </Typography>
