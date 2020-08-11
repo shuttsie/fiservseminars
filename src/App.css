@@ -218,3 +218,18 @@ footer a, footer a:hover {
 .app-logo {
   background-size:contain;
 }
+
+.auth0-lock-input-checkbox {
+  padding: 0 10px;
+}
+
+.auth0-lock-input-block.auth0-lock-input-date_selection_title .auth0-lock-input-wrap {
+  border: none;
+  pointer-events: none;
+  cursor: not-allowed;
+}
+
+input[name=date_selection_title] {
+  padding: 0 10px !important;
+  font-weight: bold;
+}
