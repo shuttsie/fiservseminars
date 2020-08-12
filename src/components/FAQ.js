@@ -39,7 +39,7 @@ export default function SimpleAccordion() {
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
-            The Educations Seminar is a three-day, virtual client conference that provides the ideal setting to gain new perspectives and connect with peers and Fiserv experts.
+            The Education Seminar is a three-day, virtual client conference that provides the ideal setting to gain new perspectives and connect with peers and Fiserv experts.
           </Typography>
         </AccordionDetails>
       </Accordion>
@@ -121,22 +121,22 @@ export default function SimpleAccordion() {
             </p>
             <h3>Seminar Fees</h3>
                 <ul>
-                    <li>Early registration fee through August 31: 
+                    <li>Early registration fee through September 11: 
                     <ul>
                         <li>$450 per connection</li>
-                        <li>$850 for <b>2</b> connections - *SimuLive and OnDemand Recordings available through December 31, 2020</li> 
+                        <li>$850 for <b>2</b> connections - *SimuLive and On-Demand Recordings available through December 31, 2020</li> 
                     </ul>
                   </li>
                   <br />
-                  <li>Standard registration fee after August 31:
+                  <li>Standard registration fee after September 11:
                     <ul>
                         <li>$500 per connection</li>
-                        <li>$950 for <b>2</b> connections - *SimuLive and OnDemand Recordings available through December 31, 2020</li>
-                        <li>$1,750 for <b>3</b> or more connections - *SimuLive and OnDemand Recordings available through December 31, 2020</li>
+                        <li>$950 for <b>2</b> connections - *SimuLive and On-Demand Recordings available through December 31, 2020</li>
+                        <li>$1,750 for <b>3</b> or more connections - *SimuLive and On-Demand Recordings available through December 31, 2020</li>
                     </ul>
                   </li>
                 </ul>
-            <p>This fee includes particpation in the Simulive training event, OnDemand recordings, a virtual social hour, a chance to win awesome prizes, a few special video surprises and access to the eletronic version of the meeting materials.</p>
+            <p>This fee includes particpation in the Simulive training event, On-Demand recordings, a virtual social hour, a chance to win awesome prizes, a few special video surprises and access to the eletronic version of the meeting materials.</p>
             <p>Registrations are subject to the cancellation policy provided at the beginning of the registration page.</p>
           </Typography>
         </AccordionDetails>
@@ -168,7 +168,7 @@ export default function SimpleAccordion() {
             There are two types of discounts available. Early Bird registration and Precision Client Event Package
             <ul>
                 <li>
-                    Early Bird registration: Register by August 31 and recieve a $50 discount
+                    Early Bird registration: Register by September 11 and recieve a $50 discount
                 </li>
                 <li>
                     Precision Client Event Package: If you have subscribed to the Precision Client Event Package, you are eligible to recieve 1 free attendee for the Precision Eduction Seminar. You also recieve <b>3 free connections</b>.
