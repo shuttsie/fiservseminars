@@ -6,7 +6,7 @@ const Sidebar = () => (
     <h2 className="earlyreg-header">Early Registration Discount</h2>
         <div className="earlyreg-box">
             <p>
-                Take advantage of a $50 discount for registrations submitted through August 31.
+                Take advantage of a $50 discount for registrations submitted through September 18.
             </p>
             <Button
                 id="earlyreg-btn"
