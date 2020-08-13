@@ -2,10 +2,10 @@ import React, { Fragment } from "react";
 
 import Login from "../components/Login";
 
-const Home = () => (
+const LoginComponent = () => (
   <Fragment>
     <Login />
   </Fragment>
 );
 
-export default Home;
+export default LoginComponent;

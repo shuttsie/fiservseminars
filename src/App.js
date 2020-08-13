@@ -7,9 +7,9 @@ import Footer from "./components/Footer";
 import SimpleAccordion from "./components/FAQ";
 import Contact from "./components/Contact";
 import Dates from "./components/Dates";
-import Login from "./components/Login";
 import Home from "./views/Home";
 import Profile from "./views/Profile";
+import LoginComponent from "./views/Login";
 import history from "./utils/history";
 
 // styles
@@ -34,7 +34,7 @@ const App = () => {
             <Route path="http://virtualtrainer.fiservapps.com/TrainGuides/2020/2020_EducationSeminar_Premier_OverviewandAgenda.pdf" />
             <Route path="/faqs" component={SimpleAccordion} />
             <Route path="/contact-us" component={Contact} />
-            <Route path="/successful-login" component={Login} />
+            <Route path="/successful-login" exact component={LoginComponent} />
           </Switch>
         </Container>
         <Footer />
