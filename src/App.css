@@ -224,3 +224,7 @@ footer a, footer a:hover {
 .d-flex {
   display: block !important;
 }
+
+.dropdown-menu {
+  left:-164px;
+}
