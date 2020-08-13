@@ -124,15 +124,15 @@ export default function SimpleAccordion() {
                     <li>Early registration fee through September 11: 
                     <ul>
                         <li>$450 per connection</li>
-                        <li>$850 for <b>2</b> connections - *SimuLive and On-Demand Recordings available through December 31, 2020</li> 
+                        <li>$750 for <b>2</b> connections - *SimuLive and On-Demand Recordings available through January 31, 2021</li> 
                     </ul>
                   </li>
                   <br />
                   <li>Standard registration fee after September 11:
                     <ul>
                         <li>$500 per connection</li>
-                        <li>$950 for <b>2</b> connections - *SimuLive and On-Demand Recordings available through December 31, 2020</li>
-                        <li>$1,750 for <b>3</b> or more connections - *SimuLive and On-Demand Recordings available through December 31, 2020</li>
+                        <li>$950 for <b>2</b> connections - *SimuLive and On-Demand Recordings available through January 31, 2021</li>
+                        <li>$1,750 for <b>3</b> or more connections - *SimuLive and On-Demand Recordings available through January 31, 2021</li>
                     </ul>
                   </li>
                 </ul>
@@ -171,7 +171,7 @@ export default function SimpleAccordion() {
                     Early Bird registration: Register by September 11 and recieve a $50 discount
                 </li>
                 <li>
-                    Precision Client Event Package: If you have subscribed to the Precision Client Event Package, you are eligible to recieve 1 free attendee for the Precision Eduction Seminar. You also recieve <b>3 free connections</b>.
+                    Precision Client Event Package: If you have subscribed to the Precision Client Event Package you will recieve <b>3 free connections</b>.
                 </li>
             </ul>
           </Typography>
@@ -201,7 +201,21 @@ export default function SimpleAccordion() {
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
-            Registration for this event will close two weeks prior to the start date. Registrations recieved after this date may be charged a $50 late registration fee. Changes or substitutions that occure after registration has closed will be assessed a $50 administration fee. Substitution of class attendees will be accepted until two weeks prior to the start date. No cancellations will be accepted within five business days of the Education Seminar start date. Registrations that are not cancelled wiil be invoiced for the full tuition.
+            Registration for this event will close two days prior to the start date. Registrations recieved after this date may be charged a $50 late registration fee. Changes or substitutions that occur after registration has closed will be assessed a $50 administration fee. No cancellations will be accepted within five business days of the Education Seminar start date. Registrations that are not cancelled wiil be invoiced for the full tuition.
+          </Typography>
+        </AccordionDetails>
+      </Accordion>
+      <Accordion>
+        <AccordionSummary
+          expandIcon={<ExpandMoreIcon />}
+          aria-controls="panel2a-content"
+          id="panel2a-header"
+        >
+        <FontAwesomeIcon icon={Icons.faInfoCircle} size="2px" className="mr-2"/>  <Typography className={classes.heading}>What is a simulive training session?</Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Typography>
+            Simulive training sessions are pre-recordings which allow you to ask questions and interact with your peers and a live Fiserv product expert during the session through a chat feature.
           </Typography>
         </AccordionDetails>
       </Accordion>

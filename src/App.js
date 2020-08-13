@@ -7,6 +7,7 @@ import Footer from "./components/Footer";
 import SimpleAccordion from "./components/FAQ";
 import Contact from "./components/Contact";
 import Dates from "./components/Dates";
+import Register from "./components/Register";
 import Home from "./views/Home";
 import Profile from "./views/Profile";
 import history from "./utils/history";
@@ -18,6 +19,7 @@ import "./App.css";
 // fontawesome
 import initFontAwesome from "./utils/initFontAwesome";
 initFontAwesome();
+
 
 const App = () => {
 
@@ -33,6 +35,7 @@ const App = () => {
             <Route path="http://virtualtrainer.fiservapps.com/TrainGuides/2020/2020_EducationSeminar_Precision_OverviewandAgenda.pdf" />
             <Route path="/faqs" component={SimpleAccordion} />
             <Route path="/contact-us" component={Contact} />
+            <Route path="/register" component={Register} />
           </Switch>
         </Container>
         <Footer />
