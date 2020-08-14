@@ -93,14 +93,6 @@ const NavBar = () => {
                   >
                     Register
                   </Button>
-                  <Button
-                    id="qsLoginBtn"
-                    color="primary"
-                    className="btn-margin"
-                    onClick={() => loginWithRedirect({ actionSignup: 'login', actionLogin: 'true' })}
-                  >
-                    Log In
-                  </Button>
                 </NavItem>
               )}
               {isAuthenticated && (
@@ -144,16 +136,6 @@ const NavBar = () => {
                     onClick={() => loginWithRedirect({ actionSignup: 'signup', actionLogin: 'false' })}
                   >
                     Register
-                  </Button>
-                </NavItem>
-                <NavItem>
-                  <Button
-                    id="qsLoginBtn"
-                    color="primary"
-                    className="btn-margin"
-                    onClick={() => loginWithRedirect({ actionSignup: 'login', actionLogin: 'true' })}
-                  >
-                    Log In
                   </Button>
                 </NavItem>
               </Nav>
