@@ -4,7 +4,7 @@ class FirstLogin extends Component {
   render() {
     return (
       <div className="next-steps my-5 seminar-container">
-          <h2>Thank you for registering for the Precision Education Seminar.</h2>
+          <h2>Thank you for registering for the Precision Education Seminar!</h2>
           <p class="italic-important">
             We are thrilled you can join us for our three day virtual seminar.
           </p>
