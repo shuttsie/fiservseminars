@@ -42,7 +42,7 @@ const NavBar = () => {
           <a href="/"><NavbarBrand className="logo" /></a>
           <NavLink
             // href="http://localhost:3000"
-            href="https://precision.fiservseminars.com"
+            href="https://premier.fiservseminars.com"
             exact
             activeClassName="router-link-exact-active"
           >
@@ -50,14 +50,14 @@ const NavBar = () => {
           </NavLink>
           <NavLink
             // href="http://localhost:3000/dates-and-locations"
-            href="/dates"
+            href="https://premier.fiservseminars.com/dates"
             exact
             activeClassName="router-link-exact-active"
           >
             Dates
           </NavLink>
           <NavLink
-            href="http://virtualtrainer.fiservapps.com/TrainGuides/2020/2020_EducationSeminar_Precision_OverviewandAgenda.pdf"
+            href="http://virtualtrainer.fiservapps.com/TrainGuides/2020/2020_EducationSeminar_Premier_OverviewandAgenda.pdf"
             target="_blank"
             exact
             activeClassName="router-link-exact-active"
@@ -66,7 +66,7 @@ const NavBar = () => {
           </NavLink>
           <NavLink
             // href="http://localhost:3000/faqs"
-            href="/faqs"
+            href="https://premier.fiservseminars.com/faqs"
             exact
             activeClassName="router-link-exact-active"
           >
@@ -74,7 +74,7 @@ const NavBar = () => {
           </NavLink>
           <NavLink
             // href="http://localhost:3000/contact-us"
-            href="/contact-us"
+            href="https://premier.fiservseminars.com/contact-us"
             exact
             activeClassName="router-link-exact-active"
           >
@@ -82,31 +82,24 @@ const NavBar = () => {
           </NavLink>
           <NavbarToggler onClick={toggle} />
           <Collapse isOpen={isOpen} navbar>
-            <Nav className="mr-auto" navbar>
-              {isAuthenticated && (
-                <NavItem>
-                  <NavLink
-                    tag={RouterNavLink}
-                    to="/external-api"
-                    exact
-                    activeClassName="router-link-exact-active"
-                    id="external-api"
-                  >
-                    External API
-                  </NavLink>
-                </NavItem>
-              )}
-            </Nav>
             <Nav className="d-none d-md-block" navbar>
               {!isAuthenticated && (
                 <NavItem>
                   <Button
+                    id="qsRegisterBtn"
+                    color="primary"
+                    className="btn-margin"
+                    onClick={() => loginWithRedirect({ actionSignup: 'signup', actionLogin: 'false' })}
+                  >
+                    Register
+                  </Button>
+                  <Button
                     id="qsLoginBtn"
                     color="primary"
                     className="btn-margin"
-                    onClick={() => loginWithRedirect()}
+                    onClick={() => loginWithRedirect({ actionSignup: 'login', actionLogin: 'true' })}
                   >
-                    Register
+                    Log In
                   </Button>
                 </NavItem>
               )}
@@ -145,12 +138,22 @@ const NavBar = () => {
               <Nav className="d-md-none" navbar>
                 <NavItem>
                   <Button
-                    id="qsLoginBtn"
+                    id="qsRegisterBtn"
                     color="primary"
                     block
-                    onClick={() => loginWithRedirect({})}
+                    onClick={() => loginWithRedirect({ actionSignup: 'signup', actionLogin: 'false' })}
                   >
                     Register
+                  </Button>
+                </NavItem>
+                <NavItem>
+                  <Button
+                    id="qsLoginBtn"
+                    color="primary"
+                    className="btn-margin"
+                    onClick={() => loginWithRedirect({ actionSignup: 'login', actionLogin: 'true' })}
+                  >
+                    Log In
                   </Button>
                 </NavItem>
               </Nav>

@@ -28,7 +28,7 @@ class Content extends Component {
               </Col>
             ))}
           </Row>
-          <Row className="d-flex justify-content-between">
+          {/* <Row className="d-flex justify-content-between">
             {Seminars.map((col, i) => (
               <Col key={i} md={5} className="mb-4 col-location">
                 <h6 className="mb-3">
@@ -36,7 +36,7 @@ class Content extends Component {
                 </h6>
               </Col>
             ))}
-          </Row>
+          </Row> */}
         </div>
       </div>
     );
