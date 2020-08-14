@@ -82,21 +82,6 @@ const NavBar = () => {
           </NavLink>
           <NavbarToggler onClick={toggle} />
           <Collapse isOpen={isOpen} navbar>
-            <Nav className="mr-auto" navbar>
-              {isAuthenticated && (
-                <NavItem>
-                  <NavLink
-                    tag={RouterNavLink}
-                    to="/external-api"
-                    exact
-                    activeClassName="router-link-exact-active"
-                    id="external-api"
-                  >
-                    External API
-                  </NavLink>
-                </NavItem>
-              )}
-            </Nav>
             <Nav className="d-none d-md-block" navbar>
               {!isAuthenticated && (
                 <NavItem>
@@ -107,6 +92,14 @@ const NavBar = () => {
                     onClick={() => loginWithRedirect({ actionSignup: 'signup', actionLogin: 'false' })}
                   >
                     Register
+                  </Button>
+                  <Button
+                    id="qsLoginBtn"
+                    color="primary"
+                    className="btn-margin"
+                    onClick={() => loginWithRedirect({ actionSignup: 'login', actionLogin: 'true' })}
+                  >
+                    Log In
                   </Button>
                 </NavItem>
               )}
@@ -141,30 +134,26 @@ const NavBar = () => {
                 </UncontrolledDropdown>
               )}
             </Nav>
-            <Nav>
-              {!isAuthenticated && (
-                  <NavItem>
-                    <Button
-                      id="qsLoginBtn"
-                      color="primary"
-                      className="btn-margin"
-                      onClick={() => loginWithRedirect({ actionSignup: 'login', actionLogin: 'true' })}
-                    >
-                      Log In
-                    </Button>
-                  </NavItem>
-                )}
-            </Nav>
             {!isAuthenticated && (
               <Nav className="d-md-none" navbar>
                 <NavItem>
                   <Button
-                    id="qsLoginBtn"
+                    id="qsRegisterBtn"
                     color="primary"
                     block
-                    onClick={() => loginWithRedirect({})}
+                    onClick={() => loginWithRedirect({ actionSignup: 'signup', actionLogin: 'false' })}
                   >
                     Register
+                  </Button>
+                </NavItem>
+                <NavItem>
+                  <Button
+                    id="qsLoginBtn"
+                    color="primary"
+                    className="btn-margin"
+                    onClick={() => loginWithRedirect({ actionSignup: 'login', actionLogin: 'true' })}
+                  >
+                    Log In
                   </Button>
                 </NavItem>
               </Nav>

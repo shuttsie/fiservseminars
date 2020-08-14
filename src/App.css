@@ -56,6 +56,7 @@ a {
 .btn-primary {
   background: rgb(102,153,204);
   border-color:rgb(102,153,204);
+  min-width:100px;
 }
 .btn-primary:hover {
   background:rgb(230,230,230);
@@ -66,17 +67,36 @@ a {
   background-color: #aaa;
   border:none;
 }
+.navbar-nav .btn {
+  min-width:100px;
+  width:100px;
+}
+button#qsRegisterBtn {
+  background: rgb(102,153,204);
+  border-color:rgb(102,153,204);
+  min-width:100px;
+}
+button#qsRegisterBtn:hover {
+  background:rgb(230,230,230);
+  border-color:#000;
+  color:#000;
+  min-width:100px;
+}
 button#qsLoginBtn {
   background:rgb(230,230,230);
   border-color:#000;
   color:#000;
   margin-left:10px;
-  min-width: 145px;
+  min-width:100px;
+  width:100px;
 }
 button#qsLoginBtn:hover {
   background: rgb(102,153,204);
   border-color:rgb(102,153,204);
   color:#fff;
+}
+.collapse.navbar-collapse {
+  justify-content: flex-end;
 }
 h1 {
   font-size:32px;
@@ -241,14 +261,34 @@ footer a, footer a:hover {
   left:-164px;
 }
 
+@media screen and (max-width: 800px) {
+  .navbar-brand {
+    margin-left:5px;
+    margin-right:25px;
+  }
+}
 /*Media Queries*/
 @media screen and (max-width: 767.98px) {
+  .navbar>.container, .navbar>.container-fluid {
+    justify-content: initial;
+  }
   .navbar {
     padding-bottom:49px;
   }
-  .navbar-brand {
-    margin-left:5px;
-    margin-right:5px;
+  ul.d-md-none.navbar-nav {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    background: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding-top: 0;
+    padding-bottom:0;
+    padding-right: 5px;
+    box-shadow: none;
+    z-index: 1;
   }
   .navbar .nav-link:nth-child(n+1) {
     position: relative;
@@ -256,8 +296,10 @@ footer a, footer a:hover {
     right: 0px;
   }
   .navbar-toggler {
-    margin-right: 5px;
-    background:#ff6600;
+    display: none;
+  }
+  .collapse:not(.show) {
+    display:block;
   }
 }
 @media screen and (max-width: 615px) {
@@ -268,5 +310,11 @@ footer a, footer a:hover {
   }
   .navbar .nav-link:nth-child(n+1) {
     right: 50px;
+  }
+}
+@media screen and (max-width: 520px) {
+  .navbar .nav-link:nth-child(n+1) {
+    padding-left: 8px;
+    padding-right: 8px;
   }
 }
