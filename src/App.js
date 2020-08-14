@@ -9,6 +9,7 @@ import Contact from "./components/Contact";
 import Dates from "./components/Dates";
 import Register from "./components/Register";
 import Home from "./views/Home";
+import FirstLogin from "./views/FirstLogin";
 import Profile from "./views/Profile";
 import history from "./utils/history";
 
@@ -35,7 +36,7 @@ const App = () => {
             <Route path="http://virtualtrainer.fiservapps.com/TrainGuides/2020/2020_EducationSeminar_Precision_OverviewandAgenda.pdf" />
             <Route path="/faqs" component={SimpleAccordion} />
             <Route path="/contact-us" component={Contact} />
-            <Route path="/register" component={Register} />
+            <Route path="/successful-login" component={Register} />
           </Switch>
         </Container>
         <Footer />
