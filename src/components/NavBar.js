@@ -42,7 +42,7 @@ const NavBar = () => {
           <a href="/"><NavbarBrand className="logo" /></a>
           <NavLink
             // href="http://localhost:3000"
-            href="https://premier.fiservseminars.com"
+            href="https://precision.fiservseminars.com"
             exact
             activeClassName="router-link-exact-active"
           >
@@ -50,7 +50,7 @@ const NavBar = () => {
           </NavLink>
           <NavLink
             // href="http://localhost:3000/dates-and-locations"
-            href="https://premier.fiservseminars.com/dates"
+            href="https://precision.fiservseminars.com/dates"
             exact
             activeClassName="router-link-exact-active"
           >
@@ -66,7 +66,7 @@ const NavBar = () => {
           </NavLink>
           <NavLink
             // href="http://localhost:3000/faqs"
-            href="https://premier.fiservseminars.com/faqs"
+            href="https://precision.fiservseminars.com/faqs"
             exact
             activeClassName="router-link-exact-active"
           >
@@ -74,7 +74,7 @@ const NavBar = () => {
           </NavLink>
           <NavLink
             // href="http://localhost:3000/contact-us"
-            href="https://premier.fiservseminars.com/contact-us"
+            href="https://precision.fiservseminars.com/contact-us"
             exact
             activeClassName="router-link-exact-active"
           >
