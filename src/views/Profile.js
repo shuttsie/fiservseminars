@@ -10,7 +10,7 @@ export const ProfileComponent = () => {
 
   return (
     <Container className="mb-5">
-      <Button
+      {/* <Button
           id="earlyreg-btn"
           color="primary"
           className="btn-margin"
@@ -18,7 +18,7 @@ export const ProfileComponent = () => {
         >
         Edit Profile
       </Button>
-      <br /><br />
+      <br /><br /> */}
       <Row className="align-items-center profile-header mb-5 text-center text-md-left">
         <Col md={2}>
           <img

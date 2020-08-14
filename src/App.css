@@ -66,6 +66,18 @@ a {
   background-color: #aaa;
   border:none;
 }
+button#qsLoginBtn {
+  background:rgb(230,230,230);
+  border-color:#000;
+  color:#000;
+  margin-left:10px;
+  min-width: 145px;
+}
+button#qsLoginBtn:hover {
+  background: rgb(102,153,204);
+  border-color:rgb(102,153,204);
+  color:#fff;
+}
 h1 {
   font-size:32px;
   color:#000;
@@ -227,4 +239,34 @@ footer a, footer a:hover {
 
 .dropdown-menu {
   left:-164px;
+}
+
+/*Media Queries*/
+@media screen and (max-width: 767.98px) {
+  .navbar {
+    padding-bottom:49px;
+  }
+  .navbar-brand {
+    margin-left:5px;
+    margin-right:5px;
+  }
+  .navbar .nav-link:nth-child(n+1) {
+    position: relative;
+    top: 50px;
+    right: 0px;
+  }
+  .navbar-toggler {
+    margin-right: 5px;
+    background:#ff6600;
+  }
+}
+@media screen and (max-width: 615px) {
+  .navbar-toggler {
+    position: absolute;
+    float: right;
+    right: 5px;
+  }
+  .navbar .nav-link:nth-child(n+1) {
+    right: 50px;
+  }
 }

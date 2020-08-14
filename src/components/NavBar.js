@@ -101,10 +101,10 @@ const NavBar = () => {
               {!isAuthenticated && (
                 <NavItem>
                   <Button
-                    id="qsLoginBtn"
+                    id="qsRegisterBtn"
                     color="primary"
                     className="btn-margin"
-                    onClick={() => loginWithRedirect()}
+                    onClick={() => loginWithRedirect({ actionSignup: 'signup', actionLogin: 'false' })}
                   >
                     Register
                   </Button>
@@ -140,6 +140,20 @@ const NavBar = () => {
                   </DropdownMenu>
                 </UncontrolledDropdown>
               )}
+            </Nav>
+            <Nav>
+              {!isAuthenticated && (
+                  <NavItem>
+                    <Button
+                      id="qsLoginBtn"
+                      color="primary"
+                      className="btn-margin"
+                      onClick={() => loginWithRedirect({ actionSignup: 'login', actionLogin: 'true' })}
+                    >
+                      Log In
+                    </Button>
+                  </NavItem>
+                )}
             </Nav>
             {!isAuthenticated && (
               <Nav className="d-md-none" navbar>

@@ -4,16 +4,16 @@ import { Container } from "reactstrap";
 
 import NavBar from "./components/NavBar";
 import Footer from "./components/Footer";
-import SimpleAccordion from "./components/FAQ";
 import Contact from "./components/Contact";
 import Dates from "./components/Dates";
+import FirstLogin from "./views/FirstLogin";
 import Home from "./views/Home";
+import SimpleAccordion from "./views/FAQ";
 import Profile from "./views/Profile";
-import LoginComponent from "./views/Login";
+
 import history from "./utils/history";
 
 // styles
-import "./Overrides.scss";
 import "./App.css";
 
 // fontawesome
@@ -34,7 +34,7 @@ const App = () => {
             <Route path="http://virtualtrainer.fiservapps.com/TrainGuides/2020/2020_EducationSeminar_Premier_OverviewandAgenda.pdf" />
             <Route path="/faqs" component={SimpleAccordion} />
             <Route path="/contact-us" component={Contact} />
-            <Route path="/successful-login" exact component={LoginComponent} />
+            <Route path="/successful-login" exact component={FirstLogin} />
           </Switch>
         </Container>
         <Footer />
