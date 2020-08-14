@@ -7,7 +7,7 @@ body {
   height: 45px;
 }
 .hero {
-  max-width:964px;
+  max-width:1100px;
 }
 .next-steps .fa-link {
   margin-right: 5px;
@@ -126,6 +126,15 @@ h3 {
 }
 h6 {
   margin-bottom:0 !important;
+}
+.nav-container {
+  background-color: #f60!important;
+  box-shadow: 0 1px 2px 0 #dfe3ec;
+}
+nav.navbar.navbar-expand-md.navbar-dark.bg-light {
+  max-width: 1100px;
+  margin: 0 auto;
+  box-shadow:none;
 }
 .navbar .nav-link {
   color:#fff;
@@ -249,7 +258,7 @@ footer a, footer a:hover {
 
 .hero .app-logo {
   background-size:contain;
-  max-width:964px;
+  max-width:1100px;
   width:100%;
 }
 
