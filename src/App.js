@@ -36,7 +36,7 @@ const App = () => {
             <Route path="http://virtualtrainer.fiservapps.com/TrainGuides/2020/2020_EducationSeminar_Precision_OverviewandAgenda.pdf" />
             <Route path="/faqs" component={SimpleAccordion} />
             <Route path="/contact-us" component={Contact} />
-            <Route path="/successful-login" component={Register} />
+            <Route path="/successful-login" component={FirstLogin} />
           </Switch>
         </Container>
         <Footer />
