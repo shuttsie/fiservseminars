@@ -38,8 +38,8 @@ const NavBar = () => {
   return (
     <div className="nav-container">
       <Navbar color="light" dark expand="md">
+        <a href="/"><NavbarBrand className="logo" /></a>
         <Container>
-          <a href="/"><NavbarBrand className="logo" /></a>
           <NavLink
             // href="http://localhost:3000"
             href="https://premier.fiservseminars.com"
