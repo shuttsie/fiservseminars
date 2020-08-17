@@ -57,7 +57,7 @@ const NavBar = () => {
             Dates
           </NavLink>
           <NavLink
-            href="http://virtualtrainer.fiservapps.com/TrainGuides/2020/2020_EducationSeminar_Premier_OverviewandAgenda.pdf"
+            href="http://virtualtrainer.fiservapps.com/TrainGuides/2020/2020_EducationSeminar_Precision_OverviewandAgenda.pdf"
             target="_blank"
             exact
             activeClassName="router-link-exact-active"
