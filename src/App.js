@@ -9,8 +9,7 @@ import Contact from "./components/Contact";
 import Dates from "./components/Dates";
 import Register from "./components/Register";
 import Home from "./views/Home";
-// import Confirmation from "./views/Confirmation";
-// import ConfirmComplete from "./views/ConfirmComplete";
+import RegComplete from "./views/RegComplete";
 import Profile from "./views/Profile";
 import history from "./utils/history";
 
@@ -37,8 +36,7 @@ const App = () => {
             <Route path="http://virtualtrainer.fiservapps.com/TrainGuides/2020/2020_EducationSeminar_Precision_OverviewandAgenda.pdf" />
             <Route path="/faqs" component={SimpleAccordion} />
             <Route path="/contact-us" component={Contact} />
-            {/* <Route path="/confirmation" component={Confirmation} />
-            <Route path="/confirmation-complete" component={ConfirmComplete} /> */}
+            <Route path="/registration-complete" component={RegComplete} />
           </Switch>
         </Container>
         <Footer />
