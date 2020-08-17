@@ -89,42 +89,12 @@ const NavBar = () => {
                     id="qsRegisterBtn"
                     color="primary"
                     className="btn-margin"
-                    onClick={() => loginWithRedirect({ actionSignup: 'signup', actionLogin: 'false' })}
+                    onClick={() => loginWithRedirect()}
                   >
                     Register
                   </Button>
                 </NavItem>
-              )}
-              {isAuthenticated && (
-                <UncontrolledDropdown nav inNavbar>
-                  <DropdownToggle nav caret id="profileDropDown">
-                    <img
-                      src={user.picture}
-                      alt="Profile"
-                      className="nav-user-profile rounded-circle"
-                      width="50"
-                    />
-                  </DropdownToggle>
-                  <DropdownMenu>
-                    <DropdownItem header>{user.name}</DropdownItem>
-                    <DropdownItem
-                      tag={RouterNavLink}
-                      to="/profile"
-                      className="dropdown-profile"
-                      activeClassName="router-link-exact-active"
-                    >
-                      <FontAwesomeIcon icon="user" className="mr-3" /> Profile
-                    </DropdownItem>
-                    <DropdownItem
-                      id="qsLogoutBtn"
-                      onClick={() => logoutWithRedirect()}
-                    >
-                      <FontAwesomeIcon icon="power-off" className="mr-3" /> Log
-                      out
-                    </DropdownItem>
-                  </DropdownMenu>
-                </UncontrolledDropdown>
-              )}
+              )}    
             </Nav>
             {!isAuthenticated && (
               <Nav className="d-md-none" navbar>
@@ -133,7 +103,7 @@ const NavBar = () => {
                     id="qsRegisterBtn"
                     color="primary"
                     block
-                    onClick={() => loginWithRedirect({ actionSignup: 'signup', actionLogin: 'false' })}
+                    onClick={() => loginWithRedirect()}
                   >
                     Register
                   </Button>
