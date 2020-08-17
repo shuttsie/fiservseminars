@@ -89,7 +89,7 @@ const NavBar = () => {
                     id="qsRegisterBtn"
                     color="primary"
                     className="btn-margin"
-                    onClick={() => loginWithRedirect({ actionSignup: 'signup', actionLogin: 'false' })}
+                    onClick={() => loginWithRedirect()}
                   >
                     Register
                   </Button>
@@ -133,7 +133,7 @@ const NavBar = () => {
                     id="qsRegisterBtn"
                     color="primary"
                     block
-                    onClick={() => loginWithRedirect({ actionSignup: 'signup', actionLogin: 'false' })}
+                    onClick={() => loginWithRedirect()}
                   >
                     Register
                   </Button>
