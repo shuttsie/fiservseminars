@@ -38,8 +38,8 @@ const NavBar = () => {
   return (
     <div className="nav-container">
       <Navbar color="light" dark expand="md">
-        <a href="/"><NavbarBrand className="logo" /></a>
         <Container>
+          <a href="/"><NavbarBrand className="logo" /></a>
           <NavLink
             // href="http://localhost:3000"
             href="https://premier.fiservseminars.com"
@@ -94,37 +94,7 @@ const NavBar = () => {
                     Register
                   </Button>
                 </NavItem>
-              )}
-              {isAuthenticated && (
-                <UncontrolledDropdown nav inNavbar>
-                  <DropdownToggle nav caret id="profileDropDown">
-                    <img
-                      src={user.picture}
-                      alt="Profile"
-                      className="nav-user-profile rounded-circle"
-                      width="50"
-                    />
-                  </DropdownToggle>
-                  <DropdownMenu>
-                    <DropdownItem header>{user.name}</DropdownItem>
-                    <DropdownItem
-                      tag={RouterNavLink}
-                      to="/profile"
-                      className="dropdown-profile"
-                      activeClassName="router-link-exact-active"
-                    >
-                      <FontAwesomeIcon icon="user" className="mr-3" /> Profile
-                    </DropdownItem>
-                    <DropdownItem
-                      id="qsLogoutBtn"
-                      onClick={() => logoutWithRedirect()}
-                    >
-                      <FontAwesomeIcon icon="power-off" className="mr-3" /> Log
-                      out
-                    </DropdownItem>
-                  </DropdownMenu>
-                </UncontrolledDropdown>
-              )}
+              )}    
             </Nav>
             {!isAuthenticated && (
               <Nav className="d-md-none" navbar>
