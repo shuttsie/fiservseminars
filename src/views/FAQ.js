@@ -124,14 +124,14 @@ export default function SimpleAccordion() {
                     <li>Early registration fee through September 18: 
                     <ul>
                         <li>$450 per connection</li>
-                        <li>$850 for <b>2</b> connections - *SimuLive and On-Demand Recordings available through December 31, 2020</li> 
+                        <li>$750 for <b>2</b> connections - *SimuLive and On-Demand Recordings available through December 31, 2020</li> 
                     </ul>
                     </li>
                     <br />
                     <li>Standard registration fee after September 18:
                     <ul>
                         <li>$500 per connection</li>
-                        <li>$950 for <b>2</b> connections - *SimuLive and On-Demand Recordings available through December 31, 2020</li>
+                        <li>$850 for <b>2</b> connections - *SimuLive and On-Demand Recordings available through December 31, 2020</li>
                         <li>$1,750 for <b>3 or more</b> connections - *SimuLive and On-Demand Recordings available through December 31, 2020</li>
                     </ul>
                     </li>

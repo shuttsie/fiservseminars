@@ -19,15 +19,15 @@ const HeroInfo = () => (
             <li>Early registration fee through September 18: 
                <ul>
                   <li>$450 per connection</li>
-                  <li>$850 for <b>2</b> connections - *SimuLive and On-Demand Recordings available through January 31, 2021</li> 
+                  <li>$750 for <b>2</b> connections - *SimuLive and On-Demand Recordings available through February 28, 2021</li> 
                </ul>
             </li>
             <br />
             <li>Standard registration fee after September 18:
                <ul>
                   <li>$500 per connection</li>
-                  <li>$950 for <b>2</b> connections - *SimuLive and On-Demand Recordings available through January 31, 2021</li>
-                  <li>$1,750 for <b>3 or more</b> connections - *SimuLive and On-Demand Recordings available through January 31, 2021</li>
+                  <li>$850 for <b>2</b> connections - *SimuLive and On-Demand Recordings available through February 28, 2021</li>
+                  <li>$1,750 for <b>3 or more</b> connections - *SimuLive and On-Demand Recordings available through February 28, 2021</li>
                </ul>
             </li>
          </ul>
