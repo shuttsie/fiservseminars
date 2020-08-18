@@ -6,6 +6,7 @@ import * as serviceWorker from "./serviceWorker";
 import { Auth0Provider } from "@auth0/auth0-react";
 import config from "./auth_config.json";
 import history from "./utils/history";
+import 'react-app-polyfill/ie11';
 
 const onRedirectCallback = (appState) => {
   history.push(
