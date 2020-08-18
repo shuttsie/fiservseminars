@@ -3,7 +3,14 @@ import ReactDOM from "react-dom";
 import 'react-app-polyfill/ie9';
 import 'react-app-polyfill/stable';
 import 'react-app-polyfill/ie11';
-import 'babel-polyfill';
+import 'core-js/fn/object/assign';
+import 'core-js/fn/string/ends-with';
+import 'core-js/fn/string/starts-with';
+import 'core-js/fn/string/includes';
+import 'core-js/fn/array/includes';
+import 'core-js/fn/array/find';
+
+import 'core-js/fn/number/is-finite';
 import "./index.css";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
