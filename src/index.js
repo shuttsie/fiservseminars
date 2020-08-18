@@ -11,6 +11,8 @@ import 'core-js/features/array/includes';
 import 'core-js/features/array/find';
 import 'core-js/features/array/map';
 import 'core-js/features/number/is-finite';
+import 'core-js/es/set';
+import 'core-js/es/map'
 
 import "./index.css";
 import App from "./App";
