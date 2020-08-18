@@ -23,6 +23,7 @@
     "auth0-lock": "^11.26.1",
     "aws-amplify": "^3.0.22",
     "aws-amplify-react": "^4.1.21",
+    "core-js": "^3.6.5",
     "cors": "^2.8.5",
     "express": "^4.16.4",
     "express-jwt": "^5.3.1",
