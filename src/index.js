@@ -1,5 +1,4 @@
-import React from "react";
-import ReactDOM from "react-dom";
+//Polyfill files needed for IE support
 import 'react-app-polyfill/ie9';
 import 'react-app-polyfill/stable';
 import 'react-app-polyfill/ie11';
@@ -13,6 +12,9 @@ import 'core-js/features/array/map';
 import 'core-js/features/number/is-finite';
 import 'core-js/es/set';
 import 'core-js/es/map'
+
+import React from "react";
+import ReactDOM from "react-dom";
 
 import "./index.css";
 import App from "./App";
