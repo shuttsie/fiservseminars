@@ -2,6 +2,13 @@ import React from "react";
 import Loading from "../components/Loading";
 import { withAuthenticationRequired } from "@auth0/auth0-react";
 
+import Cookies from 'universal-cookie';
+
+const cookies = new Cookies();
+
+cookies.set('reg', 'RegistrationComplete', { path: '/' });
+console.log(cookies.get('RegistrationComplete')); // Pacman
+
 export const RegComplete = () => {
   return (
     <div className="next-steps my-5 seminar-container">
