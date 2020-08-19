@@ -17,7 +17,7 @@ export const RegComplete = () => {
           You will be able to access the virtual seminar 5 days prior to the start date. At that time, you will be able to login and create your user profile and set preferences. Until then, feel free to browse here for more pre-seminar information.
         </p>
         <p>
-          We are excited you can join us for this exciting seminar. We will see you soon!
+          We are thrilled you can join us for this exciting seminar. We will see you soon!
         </p>
     </div>
   );
