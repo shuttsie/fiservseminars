@@ -11,7 +11,7 @@ console.log(cookies.get('RegistrationComplete')); // Pacman
 
 export const RegComplete = () => {
   return (
-    <div className="next-steps my-5 seminar-container">
+    <div className="next-steps my-5 seminar-container registration-complete">
         <h2>Your registration is now complete!</h2>
         <p class="italic-important">
           You will be able to access the virtual seminar 5 days prior to the start date. At that time, you will be able to login and create your user profile and set preferences. Until then, feel free to browse here for more pre-seminar information.
