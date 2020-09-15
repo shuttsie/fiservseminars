@@ -1,15 +1,10 @@
 # Project dependencies
-.cache
-yarn-error.log
-node_modules/
-
-# node_moduls 
-node_modules
-node_modules/
 /node_modules
+/.pnp
+.pnp.js
 
 # Build directory
-/public
+/build
 .DS_Store
 
 # aws

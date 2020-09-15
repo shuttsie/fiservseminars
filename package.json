@@ -38,6 +38,13 @@
   "devDependencies": {
     "prettier": "^1.18.2"
   },
+  "resolutions":{
+    "eslint-plugin-graphql/graphql": "^14.6.0",
+    "graphql-tools/graphql": "^14.6.0",
+    "gatsby-source-graphql/graphql": "^14.6.0",
+    "gatsby-source-pg/graphql": "^14.6.0",
+    "graphql": "^14.6.0"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/gatsbyjs/gatsby-starter-default"
