@@ -2,5 +2,5 @@
   "domain": "test-mang.us.auth0.com",
   "clientId": "3g6ud8oOEgq3WjViOzE3sXpHL4P8jArg",
   "audience": "https://test-mang.us.auth0.com/api/v2/",
-  "callbackUrl": "https://master.dorsxmbom1bqx.amplifyapp.com/"
+  "callbackUrl": "https://test.fiservseminars.com"
 }
