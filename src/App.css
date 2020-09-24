@@ -9,26 +9,41 @@ body {
 a {
   text-decoration:none;
 }
+.row {
+  margin-left:0;
+  margin-right:0;
+}
+nav .container {
+  width:100%;
+  padding:0;
+}
 .navbar-nav .btn {
   min-width:100px;
   width:100px;
 }
 .nav-btn, .note-save {
   min-width:100px;
-  font-size:1.14rem;
+  font-size:1.14em;
   line-height: 1.5;
   padding:6px 12px;
   margin:12px;
-  border-radius: .1rem;
+  border-radius: .1em;
   font-weight:normal;
   transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
 .authentication {
-  min-height:126px;
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  top:-65px;
+  max-width:1200px;
 }
 .authentication p {
   color:#000;
-  font-size:1rem;
+  font-size:1em;
+  cursor:pointer;
+  padding:0 10px;
+  text-align: center;
 }
 .authentication-btns {
   display: flex;
@@ -72,8 +87,9 @@ button.add-note:hover {
   margin:10px;
 }
 h1 {
-  font-size:1.8rem;
+  font-size:1.8em;
   color:#ff6600;
+  font-weight:bold;
 }
 .hero h1 {
   font-size:22px;
@@ -90,7 +106,7 @@ h2.section-header {
   margin-bottom:10px;
 }
 .seminar-container h2 {
-  margin-bottom:1rem;
+  margin-bottom:1em;
 }
 h3 {
   font-weight: bold;
@@ -98,22 +114,29 @@ h3 {
 }
 h3.meetingTitle {
   color:#fff;
-  font-size:1.1rem;
+  font-size:1.1em;
 }
 h6 {
   margin-bottom:0 !important;
 }
-.navbar-wrapper {
+.navbar {
+  border:none;
+}
+.navbar-wrapper, .navbar-default {
   width:100%;
   background:#fff;
   border-bottom:1px solid #ff6600;
   height:203px;
+  border-radius:0;
+  width:100%;
 }
 nav.navbar.announcement {
   background:#6699cc;
   height:76px;
   width:100%;
   max-width: 100%;
+  border-radius:0;
+  border:none;
 }
 nav.navbar.announcement p {
   margin:0 auto;
@@ -121,7 +144,7 @@ nav.navbar.announcement p {
   color:#fff;   
   text-align:center;
   padding:30px 0;
-  font-size:1.2rem;
+  font-size:1.2em;
 }
 nav.navbar.announcement a {
   color:#333;
@@ -132,14 +155,21 @@ nav.navbar.announcement a:hover {
 }
 nav.navbar {
   margin: 0 auto;
-  max-width: 1200px;
   display: flex;
   justify-content: space-between;
+}
+.navbar.navbar-expand {
+  justify-content: flex-start;
+  max-width:1200px;
 }
 .wrapper {
   height:100%;
   display:flex;
   flex-direction: row;
+}
+/*Sidebar*/
+.sidebar-nav-link:hover {
+  text-decoration: none;
 }
 .navbar.sidebar {
   width:128px;
@@ -250,16 +280,33 @@ nav.navbar {
   width:30%;
   height:100%;
 }
-.meetingContent {
+.meetingContent  {
   background:rgba(0,0,0,.75);
   border-left:10px solid #ff6600;
-  padding:5px 20px;
-  margin:2% 0;
+  padding:15px 20px;
+  margin:2% 0 !important;
+  width: 100%;
 }
-.meetingContent:first-child {
+.meetingContent {
   margin-top:0;
+  width: 100%;
 }
 .meetingContent p {
+  color:#fff;
+  font-size:1em;
+}
+.meetingContent h1 {
+  margin-top:0;
+}
+div#panel1a-header {
+  margin:0 10px;
+  position:relative;
+  top:15px;
+  border-bottom-left-radius:0;
+  border-bottom-right-radius: 0;
+}
+.toggle-buttons .active, .toggle-buttons button:hover {
+  background:#69c;
   color:#fff;
 }
 .footer {
@@ -382,28 +429,54 @@ nav.navbar {
   width: 60%;
   height:100%;
   padding:1% 2%;
-  margin:3% 2% 0 2%;
+  margin:0;
   display: inline-block;
 }
 .left.meetings h1 {
   color:#fff;
 }
 .right.meetings {
-  background:#666666;
   width: 40%;
   height:100%;
   padding:1% 2%;
   margin:3% 2% 0 2%;
   display: inline-block;
 }
-.main-content.meetings h1 {
+.main-content.meetings h1, .right.meetings h1  {
   color:#fff;
+  margin-top:0;
+}
+.meetings {
+  /* background:rgba(0,0,0,.75);
+  border-left:10px solid #ff6600;
+  padding:15px 20px;
+  margin:2% 0;
+  width: 100%; */
+  flex-direction: column;
+}
+.MuiPaper-root {
+  background-color:transparent !important;
+}
+.MuiPaper-root.MuiAccordion-root.Mui-expanded.MuiAccordion-rounded.MuiPaper-elevation1.MuiPaper-rounded {
+  background-color:transparent;
+}
+.MuiAccordionDetails-root {
+  padding:0;
+}
+.MuiAccordionSummary-content {
+  background: #ff6600;
+  padding: 10px;
+  border-radius: 10px;
+  flex-grow: unset !important;
+}
+div#panel1a-header {
+  justify-content: flex-start;
 }
 .note-save {
   background:#ff6600;
   color:#fff;
   float:right;
-  font-size:.8rem;
+  font-size:.8em;
   min-width:unset;
 }
 .left.meetings {
@@ -420,6 +493,7 @@ nav.navbar {
   margin-top:10px;
   padding:10px;
 }
+/*Chatt*/
 .chat {
   width:100%;
   height:100%;
@@ -433,8 +507,52 @@ nav.navbar {
   width:100%;
   min-height:200px;
 }
+.chat-container, .note-container {
+  width:auto;
+  margin-top:5px !important;
+}
+.chat-container .message-box {
+  padding:5px;
+}
+.chat-container .chatmessage-container {
+  width:auto;
+}
+.chat-container .container h2 {
+  margin-top:0;
+}
+.chat-container .message-box h2 {
+  color:#ff6600;
+  font-size: 1.6em;
+    margin-top: 0;
+}
+.chat-container .message-box p {
+  margin-bottom:0;
+}
+.chat h1 {
+  margin-top: 0;
+}
+.chat-form {
+  background:#fff;
+  height:50%;
+  width:98%;
+  padding:10px;
+}
+.chat-button, .note-button {
+  float:right;
+}
+.chat-button input, .note-button input {
+  float:right;
+}
+/*Notes*/
 .notes {
   width:40%;
+}
+.notes-container {
+  width: 100%;
+  height: 100%;
+  background: #666666;
+  margin-top: 10px;
+  padding: 10px;
 }
 .notes-input {
   width:100%;
@@ -455,10 +573,16 @@ nav.navbar {
   width:98%;
   padding:10px;
 }
-.profile {
+.profile-container {
   background:#fff;
   margin:0 auto;
   height: 100%;
-  width:80%;
   padding:20px;
+}
+.profile-area {
+  margin:0 auto;
+}
+
+.fade.show {
+  opacity: 1;
 }

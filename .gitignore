@@ -1,18 +1,16 @@
-# Project dependencies
-/node_modules
-/.pnp
-.pnp.js
+# See http://help.github.com/ignore-files/ for more about ignoring files.
 
-# Build directory
-/build
+# dependencies
+node_modules
+
+# testing
+coverage
+
+# production
+build
+
+# misc
 .DS_Store
-
-# aws
-src/aws-exports.js
-
-#amplify
-amplify/\#current-cloud-backend
-amplify/.config/local-*
-amplify/backend/amplify-meta.json
-aws-exports.js
-awsconfiguration.json
+.env
+npm-debug.log
+.idea
