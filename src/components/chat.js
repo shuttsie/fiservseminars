@@ -17,11 +17,11 @@ class Chat extends Component {
     }
     componentWillMount() {
         this.setState({ username: localStorage.username });
-        this.pusher = new Pusher('c7778b0cee16a9f86f7b', {
+        this.pusher = new Pusher('753fa0e07c31c514709e', {
             authEndpoint: '/pusher/auth',
             cluster: 'us2'
         });
-        this.chatRoom = this.pusher.subscribe('private-reactchat');
+        this.chatRoom = this.pusher.subscribe('private-chatapp');
     }
     componentDidMount() {
         this.chatRoom.bind('messages', newmessage => {
