@@ -98,11 +98,11 @@ export default function SimpleAccordion() {
           aria-controls="panel2a-content"
           id="panel2a-header"
         >
-        <FontAwesomeIcon icon={Icons.faInfoCircle} size="2px" className="mr-2"/>  <Typography className={classes.heading}>How/When will I recieve my electronic guides?</Typography>
+        <FontAwesomeIcon icon={Icons.faInfoCircle} size="2px" className="mr-2"/>  <Typography className={classes.heading}>How/When will I receive my electronic guides?</Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
-            You will recieve an email approximately 3 days prior to the start date with a link to the guides. Guides will also be available in the Resource Center in the virtual environment the days of the event.
+            You will receive an email approximately 3 days prior to the start date with a link to the guides. Guides will also be available in the Resource Center in the virtual environment the days of the event.
           </Typography>
         </AccordionDetails>
       </Accordion>
@@ -136,7 +136,7 @@ export default function SimpleAccordion() {
                     </ul>
                     </li>
                 </ul>
-            <p>This fee includes particpation in the Simulive training event, On-Demand recordings, a virtual social hour, a chance to win awesome prizes, a few special video surprises and access to the eletronic version of the meeting materials.</p>
+            <p>This fee includes participation in the Simulive training event, On-Demand recordings, a virtual social hour, a chance to win awesome prizes, a few special video surprises and access to the electronic version of the meeting materials.</p>
             <p>Registrations are subject to the cancellation policy provided at the beginning of the registration page.</p>
           </Typography>
         </AccordionDetails>
@@ -168,7 +168,7 @@ export default function SimpleAccordion() {
             There is one type of discount available. Early Bird registration
             <ul>
                 <li>
-                    Early Bird registration: Register by September 18 and recieve a $50 discount
+                    Early Bird registration: Register by September 18 and receive a $50 discount
                 </li>
             </ul>
           </Typography>
@@ -180,7 +180,7 @@ export default function SimpleAccordion() {
           aria-controls="panel2a-content"
           id="panel2a-header"
         >
-        <FontAwesomeIcon icon={Icons.faInfoCircle} size="2px" className="mr-2"/>  <Typography className={classes.heading}>How can I modify an exisiting registration?</Typography>
+        <FontAwesomeIcon icon={Icons.faInfoCircle} size="2px" className="mr-2"/>  <Typography className={classes.heading}>How can I modify an existing registration?</Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
@@ -198,7 +198,7 @@ export default function SimpleAccordion() {
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
-            Registration for this event will close two days prior to the start date. Registrations recieved after this date may be charged a $50 late registration fee. Changes or substitutions that occur after registration has closed will be assessed a $50 administration fee. No cancellations will be accepted within five business days of the Education Seminar start date. Registrations that are not cancelled wiil be invoiced for the full tuition.
+            Registration for this event will close two days prior to the start date. Registrations received after this date may be charged a $50 late registration fee. Changes or substitutions that occur after registration has closed will be assessed a $50 administration fee. No cancellations will be accepted within five business days of the Education Seminar start date. Registrations that are not cancelled will be invoiced for the full tuition.
           </Typography>
         </AccordionDetails>
       </Accordion>
