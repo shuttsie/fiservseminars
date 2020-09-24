@@ -1,24 +1,24 @@
-var express = require('express');
-// const path = require('path');
-var bodyParser = require("body-parser");
-var app = express();
-var Pusher = require('pusher');
-var cors = require('cors');
+const express = require('express');
+const path = require('path');
+const bodyParser = require("body-parser");
+const app = express();
+const Pusher = require('pusher');
+const cors = require('cors');
 
-var pusher = new Pusher({
-    appId: '1076927',
-    key: 'c7778b0cee16a9f86f7b',
-    secret: '7d4646d133b1ee9a3ee2',
+const pusher = new Pusher({
+    appId: '1079195',
+    key: '753fa0e07c31c514709e',
+    secret: 'bde7b5753f486cc750e7',
     cluster: 'us2',
-    useTLS: true
+    encrypted: true
 });
 
+app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
-app.use(cors());
 
 app.post('/message/send', (req, res) => {
-    pusher.trigger( 'private-reactchat', 'messages', {
+    pusher.trigger( 'private-chatapp', 'messages', {
         message: req.body.message,
         username: req.body.username
     });
