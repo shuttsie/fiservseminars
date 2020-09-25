@@ -1,6 +1,6 @@
 import React from 'react'
 import Iframe from 'react-iframe'
-import Chat from './chat'
+import Chat from './Chat'
 
 const Left = () => {
     if (window.location.href === "http://localhost:3000/meetings" || window.location.href === "https://test.fiservseminars.com/meetings" || window.location.href === "https://master.dorsxmbom1bqx.amplifyapp.com/meetings") {
@@ -20,7 +20,7 @@ const Left = () => {
                     </div> 
                 <div className="chat">
                     <h1>Chat</h1>
-                    <Chat/>
+                    <Chat />
                 </div>   
             </section>
             

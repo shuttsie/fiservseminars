@@ -1,74 +1,50 @@
-import React, { Component } from 'react';
-import { Navbar, Nav, Button } from 'react-bootstrap';
-import './App.css';
-import Home from './Pages/Home'
+import React from "react";
+import { Router, Route, Switch } from "react-router-dom";
+import { Container } from "reactstrap";
 
-class App extends Component {
-  goTo(route) {
-    this.props.history.replace(`/${route}`)
+import Loading from "./components/Loading";
+import NavBar from "./components/NavBar";
+import Footer from "./components/Footer";
+import Home from "./views/Home";
+import Profile from "./views/Profile";
+import Meetings from "./views/Meetings";
+import ExternalApi from "./views/ExternalApi";
+import { useAuth0 } from "@auth0/auth0-react";
+import history from "./utils/history";
+
+// styles
+import "./App.css";
+
+// fontawesome
+import initFontAwesome from "./utils/initFontAwesome";
+initFontAwesome();
+
+const App = () => {
+  const { isLoading, error } = useAuth0();
+
+  if (error) {
+    return <div>Oops... {error.message}</div>;
   }
 
-  login() {
-    this.props.auth.login();
+  if (isLoading) {
+    return <Loading />;
   }
 
-  logout() {
-    this.props.auth.logout();
-  }
-
-  render() {
-    const { isAuthenticated } = this.props.auth;
-
-    return (
-      <div>
-      <Navbar>
-          <nav className="navbar navbar-expand announcement">
-            <p>
-              UPCOMING CONFERENCE: How to use Access Manager to it's fullest potential. <a href="/">Grab a seat in the Virtual Classroom</a>
-            </p>
-          </nav>
-          <nav className="navbar navbar-expand">
-             <div className="logo">
-               <a href="/home"><img src="https://s3.us-east-2.amazonaws.com/fiservseminars-media.com/logo.png" height="84px" alt="logo"></img></a>
-             </div>
-          </nav>
-          <nav className="navbar-nav-scroll authentication">
-              {
-                  !isAuthenticated() && (
-                      <p
-                          className="btn-margin signin"
-                          onClick={this.login.bind(this)}
-                      ><i className="fa fa-fw fa-sign-in-alt" style={{ fontSize: '3rem', color:'#ff6600' }} /><br/>
-                        Login
-                      </p>
-                  )
-              }
-              {
-                  isAuthenticated() && (
-                      <p
-                          className="btn-margin profile"
-                          onClick={this.goTo.bind(this, 'profile')}
-                      ><i className="fa fa-fw fa-user" style={{ fontSize: '3rem', color:'#ff6600' }} /><br/>
-                        Profile
-                      </p>
-                  )
-              }
-              {
-                  isAuthenticated() && (
-                      <p
-                          className="btn-margin logout"
-                          onClick={this.logout.bind(this)}
-                      ><i className="fa fa-fw fa-sign-out-alt" style={{ fontSize: '3rem', color:'#ff6600', cursor:'pointer' }} /><br/>
-                        Log Out
-                      </p>
-                  )
-              }
-          </nav>
-        </Navbar>
-        <Home/>
-        </div>
-    );
-  }
-}
+  return (
+    <Router history={history}>
+      <div id="app" className="d-flex flex-column h-100">
+        <NavBar />
+        <Container className="flex-grow-1 mt-5">
+          <Switch>
+            <Route path="/" exact component={Home} />
+            <Route path="/profile" component={Profile} />
+            <Route path="/meetings" component={Meetings} />
+          </Switch>
+        </Container>
+        <Footer />
+      </div>
+    </Router>
+  );
+};
 
 export default App;
