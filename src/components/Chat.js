@@ -5,7 +5,6 @@ import { FormControl, Row, Col } from 'react-bootstrap';
 // import Pusher from 'pusher-js'
 
 class Chat extends Component {
-<<<<<<< HEAD
     // constructor(props) {
     //     super(props);
     //     this.state = {
@@ -28,30 +27,6 @@ class Chat extends Component {
     //     this.chatRoom.bind('messages', newmessage => {
     //         this.setState({messages: this.state.messages.concat(newmessage)})
     //     }, this);
-=======
-    constructor(props) {
-        super(props);
-        this.state = {
-            value: '',
-            username: '',
-            messages: [],
-        };
-        this.sendMessage = this.sendMessage.bind(this);
-        this.handleChange = this.handleChange.bind(this);
-    }
-    componentWillMount() {
-        this.setState({ username: localStorage.username });
-        this.pusher = new Pusher('753fa0e07c31c514709e', {
-            authEndpoint: '/pusher/auth',
-            cluster: 'us2'
-        });
-        this.chatRoom = this.pusher.subscribe('private-chatapp');
-    }
-    componentDidMount() {
-        this.chatRoom.bind('messages', newmessage => {
-            this.setState({messages: this.state.messages.concat(newmessage)})
-        }, this);
->>>>>>> 9d3b7e9e201792a2f81102f38cf0a81bedf6e87f
 
     // }
     // handleChange(event) {
