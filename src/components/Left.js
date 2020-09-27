@@ -1,9 +1,10 @@
-import React from 'react'
+import React, { Component } from 'react'
 import Iframe from 'react-iframe'
-import Chat from './Chat'
+// import Chat from '../chat/Chat'
 
-const Left = () => {
-    if (window.location.href === "http://localhost:3000/meetings" || window.location.href === "https://test.fiservseminars.com/meetings" || window.location.href === "https://master.dorsxmbom1bqx.amplifyapp.com/meetings") {
+class Left extends Component {
+    render() {
+      if (window.location.href === "http://localhost:3000/meetings" || window.location.href === "https://test.fiservseminars.com/meetings" || window.location.href === "https://master.dorsxmbom1bqx.amplifyapp.com/meetings") {
         return (
             <section className="left meetings">
                 <div>
@@ -18,10 +19,10 @@ const Left = () => {
                         display="initial"
                         position="relative"/>
                     </div> 
-                <div className="chat">
+                {/* <div className="chat">
                     <h1>Chat</h1>
                     <Chat />
-                </div>   
+                </div>    */}
             </section>
             
         ) 
@@ -39,7 +40,8 @@ const Left = () => {
             </section>
             
         ); 
-    }  
+    }    
+    }
 }
 
 export default Left

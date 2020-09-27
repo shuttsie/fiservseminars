@@ -1,8 +1,8 @@
 import React, { useContext, useReducer } from 'react';
 
-import AddNote from '../Notes/AddNote';
-import NoteList from '../Notes/NoteList';
-import EditNote from '../Notes/EditNote';
+import AddNote from '../notes/AddNote';
+import NoteList from '../notes/NoteList';
+import EditNote from '../notes/EditNote';
 import NotesContext from '../context';
 import notesReducer from '../reducer';
 

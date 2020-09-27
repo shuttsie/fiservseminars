@@ -326,3 +326,22 @@ h6 {
    right:0;
    left:unset;
  }
+ .ui.padded.two.column.grid {
+   background:rgba(255,255,255,.6);
+   width: 90%;
+ }
+.ui.padded.two.column.grid .row {
+  margin-left:0;
+  margin-right:0;
+  justify-content: space-around;
+}
+.ui.padded.two.column.grid .row .column {
+  padding:10px;
+}
+.next-steps h2 {
+  margin-bottom:0;
+}
+.video-description {
+  width: 100%;
+  max-width: 450px;
+}

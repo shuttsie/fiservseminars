@@ -1,5 +1,5 @@
 import React from 'react'
-import SideNav, { NavItem, NavIcon } from '@trendmicro/react-sidenav';
+import SideNav, { NavItem, NavIcon, Dropdown, MenuItem } from '@trendmicro/react-sidenav';
 import { Link } from "react-router-dom"
 
 function Sidenav() {
@@ -32,8 +32,21 @@ function Sidenav() {
                 </NavItem>
                 <NavItem id="sidenav-item">
                     <NavIcon>
-                        <Link className="sidebar-nav-link" to="/meetings"><i className="fa fa-fw fa-cogs" style={{ fontSize: '1.75em' }} />Resource Center</Link>
+                        <Link className="sidebar-nav-link" to="/resource-center"><i className="fa fa-fw fa-cogs" style={{ fontSize: '1.75em' }} />Resource Center</Link>
                     </NavIcon>
+                    {/* <Dropdown>
+                            <Dropdown.Toggle>
+                                Settings
+                            </Dropdown.Toggle>
+                            <Dropdown.Menu>
+                                <MenuItem onClick={this.navigate('settings/policies')}>
+                                    Policies
+                                </MenuItem>
+                                <MenuItem onClick={this.navigate('settings/network')}>
+                                    Network
+                                </MenuItem>
+                            </Dropdown.Menu>
+                        </Dropdown> */}
                 </NavItem>
                 <NavItem id="sidenav-item">
                     <NavIcon>
