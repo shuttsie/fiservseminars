@@ -40,7 +40,7 @@ const NavBar = () => {
       <Navbar color="light" light expand="md">
           <nav className="navbar navbar-expand announcement">
             <p>
-              UPCOMING CONFERENCE: How to use Access Manager to it's fullest potential. <a href="/">Grab a seat in the Virtual Classroom</a>
+              UPCOMING MEETING: Deposit Parameters Review. <a href="/meetings">Grab a seat in the Virtual Classroom</a>
             </p>
           </nav>
         <Container>

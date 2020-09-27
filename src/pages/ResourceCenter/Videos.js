@@ -1,11 +1,12 @@
-import React from 'react'
+import React, { Fragment } from "react";
 import { Grid, Header, Segment  } from 'semantic-ui-react'
 import ReactPlayer from 'react-player'
-import Sidenav from '../components/SideNav'
+import CustomSidenav from '../../components/SideNav'
 
 const Videos = () => (
-    <div className="next-steps my-5 content-wrapper">
-        <Sidenav />
+    <Fragment>
+        <div className="next-steps my-5 content-wrapper">
+        <CustomSidenav />
         <div className="main-content">
             <Grid columns={2} padded>
                 <Grid.Row>
@@ -59,6 +60,8 @@ const Videos = () => (
             </Grid>
         </div>
     </div>
+    </Fragment>
+    
 )
 
 export default Videos

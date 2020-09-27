@@ -1,5 +1,16 @@
 import React from 'react'
-import SideNav, { NavItem, NavIcon, Dropdown, MenuItem } from '@trendmicro/react-sidenav';
+import SideNav, { NavItem, NavIcon } from '@trendmicro/react-sidenav';
+import Dropdown, {
+    DropdownToggle,
+    DropdownMenu,
+    DropdownMenuWrapper,
+    MenuItem,
+    DropdownButton
+} from '@trendmicro/react-dropdown';
+
+import '@trendmicro/react-buttons/dist/react-buttons.css';
+import '@trendmicro/react-dropdown/dist/react-dropdown.css';
+
 import { Link } from "react-router-dom"
 
 function Sidenav() {
@@ -32,21 +43,20 @@ function Sidenav() {
                 </NavItem>
                 <NavItem id="sidenav-item">
                     <NavIcon>
-                        <Link className="sidebar-nav-link" to="/resource-center"><i className="fa fa-fw fa-cogs" style={{ fontSize: '1.75em' }} />Resource Center</Link>
-                    </NavIcon>
-                    {/* <Dropdown>
-                            <Dropdown.Toggle>
-                                Settings
+                        <Dropdown className="resource-flyout">
+                            <Dropdown.Toggle className="resource-flyout-toggle">
+                                <i className="fa fa-fw fa-cogs" style={{ fontSize: '1.75em' }} />Resource Center
                             </Dropdown.Toggle>
-                            <Dropdown.Menu>
-                                <MenuItem onClick={this.navigate('settings/policies')}>
-                                    Policies
+                            <Dropdown.Menu className="resource-flyout-menu">
+                                <MenuItem className="resource-flyout-menu-item">
+                                    <Link className="sidebar-nav-link" to="/resource-center/articles"><i className="fa fa-fw fa-newspaper" style={{ fontSize: '1.5em', margin:'5px' }} />Articles</Link>
                                 </MenuItem>
-                                <MenuItem onClick={this.navigate('settings/network')}>
-                                    Network
+                                <MenuItem>
+                                    <Link className="sidebar-nav-link" to="/resource-center/videos"><i className="fa fa-fw fa-video" style={{ fontSize: '1.5em', margin:'5px' }} />Videos</Link>
                                 </MenuItem>
                             </Dropdown.Menu>
-                        </Dropdown> */}
+                        </Dropdown>
+                    </NavIcon>
                 </NavItem>
                 <NavItem id="sidenav-item">
                     <NavIcon>
