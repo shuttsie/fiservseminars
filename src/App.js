@@ -10,6 +10,7 @@ import Profile from "./pages/Profile";
 import Meetings from "./pages/Meetings";
 import ResourceCenter from "./pages/ResourceCenter/ResourceCenter";
 import Videos from "./pages/ResourceCenter/Videos";
+import Articles from "./pages/ResourceCenter/Articles";
 import { useAuth0 } from "@auth0/auth0-react";
 import history from "./utils/history";
 
@@ -40,9 +41,9 @@ const App = () => {
             <Route path="/" exact component={Home} />
             <Route path="/profile" component={Profile} />
             <Route path="/meetings" component={Meetings} />
-            <Route path="/resource-center" component={ResourceCenter} />
+            {/* <Route path="/resource-center" component={ResourceCenter} /> */}
             <Route path="/resource-center/videos" component={Videos} />
-            <Route path="/resource-center/articles" component={ResourceCenter} />
+            <Route path="/resource-center/articles" component={Articles} />
           </Switch>
         </Container>
         <Footer />

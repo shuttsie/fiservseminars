@@ -1,11 +1,7 @@
 import React from 'react'
 import SideNav, { NavItem, NavIcon } from '@trendmicro/react-sidenav';
 import Dropdown, {
-    DropdownToggle,
-    DropdownMenu,
-    DropdownMenuWrapper,
     MenuItem,
-    DropdownButton
 } from '@trendmicro/react-dropdown';
 
 import '@trendmicro/react-buttons/dist/react-buttons.css';
@@ -28,7 +24,7 @@ function Sidenav() {
                 </NavItem>
                 <NavItem id="sidenav-item">
                     <NavIcon>
-                        <Link className="sidebar-nav-link" to="/calendar"><i className="fa fa-fw fa-calendar" style={{ fontSize: '1.75em' }} />Agenda</Link>
+                        <a className="sidebar-nav-link" href="https://fiservseminars-media.s3.amazonaws.com/2020_Education+Seminar_Precision_Overview+and+Agenda.pdf" target="_blank"><i className="fa fa-fw fa-calendar" style={{ fontSize: '1.75em' }} />Agenda</a>
                     </NavIcon>
                 </NavItem>
                 {/* <NavItem>

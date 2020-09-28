@@ -439,4 +439,25 @@ span.dropdown---caret---3CkEt {
   flex-direction: row;
   align-items:center;
   border:none;
+  height:fit-content;
 }
+.article-block {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+}
+.article-block .ui.card {
+  width:40%;
+  padding:10px;
+}
+.card-header {
+  color:#2e8bca;
+  font-size:22px;
+  font-weight: normal;
+}
+.card-description {
+  padding:5px;
+}
+/* .ui.card .content {
+  min-height:210px;
+} */
