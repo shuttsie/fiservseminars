@@ -1,65 +1,72 @@
-import React, { Component } from 'react';
-import axios from 'axios';
-import Pusher from 'pusher-js';
-import ChatList from './ChatList';
-import ChatBox from './ChatBox';
-// import logo from './logo.svg';
-// import './App.css';
+import React, { useState, useEffect } from 'react';
+import queryString from 'query-string';
+import io from 'socket.io-client';
 
-class Chat extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      text: '',
-      username: '',
-      chats: []
-    };
-  }
+import TextContainer from './TextContainer';
+import Messages from './Messages';
+import InfoBar from './InfoBar';
+import Input from './Input';
 
-  componentDidMount() {
-    const username = window.prompt('Username: ', 'Anonymous');
-    this.setState({ username });
-    const pusher = new Pusher('628357a9fcd4596f2b07', {
-      cluster: 'mt1',
-      encrypted: true
+// import './Chat.css';
+
+const ENDPOINT = 'https://fiserv-chat-server.herokuapp.com/';
+
+let socket;
+
+const Chat = ({ location }) => {
+  const [name, setName] = useState('');
+  const [room, setRoom] = useState('');
+  const [users, setUsers] = useState('');
+  const [message, setMessage] = useState('');
+  const [messages, setMessages] = useState([]);
+
+  useEffect(() => {
+    const { name, room } = queryString.parse(location.search);
+
+    socket = io(ENDPOINT);
+
+    setRoom(room);
+    setName(name);
+
+    socket.emit('join', { name, room }, (error) => {
+      if (error) {
+        alert(error);
+      }
     });
-    const channel = pusher.subscribe('private-chat');
-    channel.bind('message', data => {
-      this.setState({ chats: [...this.state.chats, data], test: '' });
-    });
-    this.handleTextChange = this.handleTextChange.bind(this);
-  }
+  }, [ENDPOINT, location.search]);
 
-  handleTextChange(e) {
-    if (e.keyCode === 13) {
-      const payload = {
-        username: this.state.username,
-        message: this.state.text
-      };
-      axios.post('http://localhost:5000/message', payload);
-    } else {
-      this.setState({ text: e.target.value });
+  useEffect(() => {
+    socket.on('message', (message) => {
+      setMessages((messages) => [...messages, message]);
+    });
+
+    socket.on('roomData', ({ users }) => {
+      setUsers(users);
+    });
+  }, []);
+
+  const sendMessage = (event) => {
+    event.preventDefault();
+
+    if (message) {
+      socket.emit('sendMessage', message, () => setMessage(''));
     }
-  }
+  };
 
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          {/* <img src={logo} className="App-logo" alt="logo" /> */}
-          <h1 className="App-title">Welcome to React-Pusher Chat</h1>
-        </header>
-        <section>
-          <ChatList chats={this.state.chats} />
-          <ChatBox
-            text={this.state.text}
-            username={this.state.username}
-            handleTextChange={this.handleTextChange}
-          />
-        </section>
+  return (
+    <div className='outerContainer'>
+      <div className='container'>
+        <InfoBar room={room} />
+        <Messages messages={messages} name={name} />
+        <Input
+          message={message}
+          setMessage={setMessage}
+          sendMessage={sendMessage}
+        />
       </div>
-    );
-  }
-}
+      <TextContainer users={users} />
+    </div>
+  );
+};
 
 export default Chat;

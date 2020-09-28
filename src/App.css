@@ -41,9 +41,15 @@ input[type="text"], input[type="password"], textarea, select {
 div#root {
   height:auto !important;
 }
+html, body {
+  height:100%;
+  min-height:100%;
+  overflow: auto;
+}
 body {
   font-family: Helvetica, Arial, sans-serif;
-  background:url('https://fiservseminars-media.s3.amazonaws.com/bkgd.png') no-repeat center -20px;
+  background-image:url('https://fiservseminars-media.s3.amazonaws.com/bkgd.png'), linear-gradient(to bottom, #1f1f1f 0%, #202020 50%, #232323 100%);
+  background-repeat:no-repeat;
   padding:0;
   margin:0;
   color:#000;
@@ -52,6 +58,20 @@ body {
 /*Fonts*/
 a {
   text-decoration:none;
+}
+.btn-primary {
+  background: rgb(102,153,204);
+  border-color:rgb(102,153,204);
+  min-width:100px;
+}
+.btn-primary:hover {
+  background:rgb(230,230,230);
+  border-color:#000;
+  color:#000;
+}
+.btn-primary.disabled, .btn-primary:disabled {
+  background-color: #aaa;
+  border:none;
 }
 h1 {
   font-size:1.8em;
@@ -280,6 +300,9 @@ h6 {
   height: 100%;
 }
 
+.right.meetings {
+  margin: 3% 2% 0;
+}
 /*Footer*/
 .footer {
   background: #333;
@@ -336,12 +359,12 @@ h6 {
    color:#fff;
  }
 
+ /*Notes*/
  .note-form {
    position: relative;
    background-color: #fff;
    transition: box-shadow .25s;
    padding: 1% 2%;
-   margin: 35px 3% 2% 0;
  }
 
  .note-form input {
@@ -349,7 +372,7 @@ h6 {
   border-radius: 0 0 2px 2px;
   border: none !important;
  }
-
+ 
  .nav-item.dropdown .dropdown-menu {
    right:0;
    left:unset;
@@ -458,6 +481,6 @@ span.dropdown---caret---3CkEt {
 .card-description {
   padding:5px;
 }
-/* .ui.card .content {
-  min-height:210px;
-} */
+.ui.card .content {
+  min-width:589px;
+}

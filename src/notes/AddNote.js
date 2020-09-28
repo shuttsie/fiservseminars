@@ -30,7 +30,7 @@ export default function AddNote() {
       <h1>Notes</h1>
       <form onSubmit={handleSubmit} action=''>
         <input type='text' ref={ref} onChange={handleChange} value={value} />
-        <button>Add note</button>
+        <button className="add-note btn-primary">Add note</button>
       </form>
     </div>
   );

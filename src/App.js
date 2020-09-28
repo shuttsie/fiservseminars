@@ -1,5 +1,5 @@
 import React from "react";
-import { Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { Container } from "reactstrap";
 
 import Loading from "./components/Loading";
@@ -8,11 +8,12 @@ import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import Profile from "./pages/Profile";
 import Meetings from "./pages/Meetings";
-import ResourceCenter from "./pages/ResourceCenter/ResourceCenter";
 import Videos from "./pages/ResourceCenter/Videos";
 import Articles from "./pages/ResourceCenter/Articles";
 import { useAuth0 } from "@auth0/auth0-react";
 import history from "./utils/history";
+// import Join from './pages/Join';
+// import Chat from './pages/Chat';
 
 // styles
 import "./App.css";
@@ -44,6 +45,8 @@ const App = () => {
             {/* <Route path="/resource-center" component={ResourceCenter} /> */}
             <Route path="/resource-center/videos" component={Videos} />
             <Route path="/resource-center/articles" component={Articles} />
+            {/* <Route path='/chat' component={Chat} />
+            <Route path='/join' component={Join} /> */}
           </Switch>
         </Container>
         <Footer />
