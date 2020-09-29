@@ -64,7 +64,7 @@ a {
   border-color:rgb(102,153,204);
   min-width:100px;
 }
-.btn-primary:hover {
+.btn-primary:hover, #qsLoginBtn:hover  {
   background:rgb(230,230,230);
   border-color:#000;
   color:#000;
@@ -72,6 +72,10 @@ a {
 .btn-primary.disabled, .btn-primary:disabled {
   background-color: #aaa;
   border:none;
+}
+#qsLoginBtn {
+  background:#ff6600;
+  border-color:#ff6600;
 }
 h1 {
   font-size:1.8em;
