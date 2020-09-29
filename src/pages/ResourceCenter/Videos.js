@@ -10,12 +10,12 @@ const Videos = () => (
         <div className="main-content">
             <Grid columns={2} padded>
                 <Grid.Row>
-                <Grid.Column width={8}>
+                    <Grid.Column width={8}>
                         <ReactPlayer url='https://fiservseminars-media.s3.amazonaws.com/Videos/Idea+Portal.mp4' width='450px' height='300px' controls='true'/>
-                            <div className="video-description">
-                                <h1>A New and Better Way to Submit Precision® Enhancement Ideas</h1>
-                                <p>Fiserv is dedicated to delivering solutions that enhance the client experience and enable your financial institution to achieve best-in-class results. Identifying improvements that enable our client community to take advantage of market opportunities and solve business challenges is an integral part of our market-focused approach. We regularly collect ideas for system enhancements from numerous sources and conduct extensive review processes to uncover prevailing or changing trends.</p> 
-                            </div>
+                        <div className="video-description">
+                            <h1>A New and Better Way to Submit Precision® Enhancement Ideas</h1>
+                            <p>Fiserv is dedicated to delivering solutions that enhance the client experience and enable your financial institution to achieve best-in-class results. Identifying improvements that enable our client community to take advantage of market opportunities and solve business challenges is an integral part of our market-focused approach. We regularly collect ideas for system enhancements from numerous sources and conduct extensive review processes to uncover prevailing or changing trends.</p> 
+                        </div>
                     </Grid.Column>
                     <Grid.Column width={8}>
                         <ReactPlayer url='https://fiservseminars-media.s3.amazonaws.com/Videos/Abiliti.mp4' width='450px' height='300px' controls='true'/>
@@ -61,6 +61,21 @@ const Videos = () => (
                         <div className="video-description">
                            <h1>ATM Managed Services</h1>
                             <p>Keep your ATM programs running smoothly. ATM Managed Services provides the opportunity to maximize operational efficiency, free staff to focus on more productive tasks, and helps improve performance, profitability and cardholder satisfaction.</p> 
+                        </div>
+                    </Grid.Column>
+                </Grid.Row>
+                <Grid.Row>
+                    <Grid.Column width={8}>
+                        <ReactPlayer url='https://fiservseminars-media.s3.amazonaws.com/Impactful+Solutions+for+Today%E2%80%99s+Ecosystem.mp4' width='450px' height='300px' controls='true'/>
+                        <div className="video-description">
+                            <h1>Impactful Solutions for Today’s Ecosystem: Instant Issue AdvantageTM, Source AdvantageSM and Statement AdvantageTM</h1>
+                            <p>In today’s environment, meeting customer needs has never been more important.  Fiserv is committed to helping our clients navigate a changing world. We’re all experiencing unprecedented disruption in the way we live and work. Servicing your accountholders in a time of crisis and having the right tools to do so is of utmost importance. </p> 
+                            During this session we’ll discuss:
+                            <ul>
+                                <li>The value of instant card issuance in today’s environment</li>
+                                <li>The value of ordering Source Advantage supplies through CustomSourceTM to support your branch operations and drive-thru activity</li> 
+                                <li>Strategies for creating powerful connections with Statement Advantage to build accountholder loyalty and trust</li>
+                            </ul>
                         </div>
                     </Grid.Column>
                 </Grid.Row>

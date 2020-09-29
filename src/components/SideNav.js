@@ -58,45 +58,47 @@ function Sidenav() {
             </NavIcon>
           </NavItem>
         )}
-        <NavItem id='sidenav-item'>
-          <NavIcon>
-            <Dropdown className='resource-flyout'>
-              <Dropdown.Toggle className='resource-flyout-toggle'>
-                <i
-                  className='fa fa-fw fa-cogs'
-                  style={{ fontSize: '1.75em' }}
-                />
-                Resource Center
-              </Dropdown.Toggle>
-              <Dropdown.Menu className='resource-flyout-menu'>
-                <MenuItem className='resource-flyout-menu-item'>
-                  <Link
-                    className='sidebar-nav-link'
-                    to='/resource-center/articles'
-                  >
-                    <i
-                      className='fa fa-fw fa-newspaper'
-                      style={{ fontSize: '1.5em', margin: '5px' }}
-                    />
-                    Session Collateral
-                  </Link>
-                </MenuItem>
-                <MenuItem>
-                  <Link
-                    className='sidebar-nav-link'
-                    to='/resource-center/videos'
-                  >
-                    <i
-                      className='fa fa-fw fa-video'
-                      style={{ fontSize: '1.5em', margin: '5px' }}
-                    />
-                    OnDemand
-                  </Link>
-                </MenuItem>
-              </Dropdown.Menu>
-            </Dropdown>
-          </NavIcon>
-        </NavItem>
+        {isAuthenticated && (
+          <NavItem id='sidenav-item'>
+            <NavIcon>
+              <Dropdown className='resource-flyout'>
+                <Dropdown.Toggle className='resource-flyout-toggle'>
+                  <i
+                    className='fa fa-fw fa-cogs'
+                    style={{ fontSize: '1.75em' }}
+                  />
+                  Resource Center
+                </Dropdown.Toggle>
+                <Dropdown.Menu className='resource-flyout-menu'>
+                  <MenuItem className='resource-flyout-menu-item'>
+                    <Link
+                      className='sidebar-nav-link'
+                      to='/resource-center/articles'
+                    >
+                      <i
+                        className='fa fa-fw fa-newspaper'
+                        style={{ fontSize: '1.5em', margin: '5px' }}
+                      />
+                      Session Collateral
+                    </Link>
+                  </MenuItem>
+                  <MenuItem>
+                    <Link
+                      className='sidebar-nav-link'
+                      to='/resource-center/videos'
+                    >
+                      <i
+                        className='fa fa-fw fa-video'
+                        style={{ fontSize: '1.5em', margin: '5px' }}
+                      />
+                      OnDemand
+                    </Link>
+                  </MenuItem>
+                </Dropdown.Menu>
+              </Dropdown>
+            </NavIcon>
+          </NavItem>
+        )}
         <NavItem id='sidenav-item'>
           <NavIcon>
             <Link className='sidebar-nav-link' to='/profile'>
