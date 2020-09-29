@@ -78,7 +78,7 @@ function Sidenav() {
                       className='fa fa-fw fa-newspaper'
                       style={{ fontSize: '1.5em', margin: '5px' }}
                     />
-                    Articles
+                    Session Collateral
                   </Link>
                 </MenuItem>
                 <MenuItem>
@@ -90,7 +90,7 @@ function Sidenav() {
                       className='fa fa-fw fa-video'
                       style={{ fontSize: '1.5em', margin: '5px' }}
                     />
-                    Videos
+                    OnDemand
                   </Link>
                 </MenuItem>
               </Dropdown.Menu>

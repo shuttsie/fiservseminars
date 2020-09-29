@@ -27,3 +27,8 @@ select:focus {
   border: none;
   width: 20%;
 }
+
+.sendButton:hover {
+  background: rgb(102,153,204);
+  border-color:rgb(102,153,204);
+}

@@ -10,7 +10,7 @@ const ProfileCards = () => {
 
   useEffect(() => {
     const getUserMetadata = async () => {
-      const domain = 'shutts-test.us.auth0.com';
+      const domain = 'fiservseminars.us.auth0.com';
 
       try {
         const accessToken = await getAccessTokenSilently({

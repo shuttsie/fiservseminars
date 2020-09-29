@@ -3,3 +3,7 @@
   overflow: auto;
   flex: auto;
 }
+div[class*="react-scroll-to-bottom--css"] {
+  max-height:200px;
+  height:100%;
+}
