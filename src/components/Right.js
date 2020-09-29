@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import { Accordion, Icon } from 'semantic-ui-react'
 import { Button } from 'reactstrap'
-import Notes from '../components/Notes'
 // import Notes from '../components/notes'
 
 class Right extends Component{
@@ -17,13 +16,6 @@ class Right extends Component{
 
   render() {
     const { activeIndex } = this.state
-    if (window.location.href === "http://localhost:3000/meetings" || window.location.href === "https://dev1129.d3d7phzdfgq362.amplifyapp.com/meetings" || window.location.href === "https://test.fiservseminars.com/meetings" || window.location.href === "https://master.dorsxmbom1bqx.amplifyapp.com/meetings") {
-        return (
-            <section className="right meetings">
-                <Notes />
-            </section>
-        )
-    } else {
     return (
         <section className="right">
         <div>
@@ -162,7 +154,6 @@ class Right extends Component{
     </div>
     </section>
     )
-    }
   }
 }
 

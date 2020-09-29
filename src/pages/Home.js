@@ -1,13 +1,17 @@
 import React, { Fragment } from "react";
-
-import Hero from "../components/Hero";
-import Content from "../components/Content";
+import Sidenav from "../components/SideNav";
+import Left from "../components/Left";
+import Right from "../components/Right";
 
 const Home = () => (
   <Fragment>
-    {/* <Hero />
-    <hr /> */}
-    <Content />
+    <div className="next-steps my-5 content-wrapper">
+      <Sidenav />
+      <div className="main-content">
+        <Left />
+        <Right />
+      </div>
+    </div>
   </Fragment>
 );
 

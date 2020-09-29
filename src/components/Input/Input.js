@@ -1,11 +1,11 @@
 import React from 'react';
 
-// import './Input.css';
+import './Input.css';
 
 const Input = ({ message, setMessage, sendMessage }) => (
   <form className='form'>
     <input
-      className='input'
+      className='chat-input'
       type='text'
       placeholder='Type a message...'
       value={message}

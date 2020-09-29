@@ -1,5 +1,5 @@
 {
-  "domain": "test-mang.us.auth0.com",
-  "clientId": "g1pr9Djk07mZ1A11WGj3KPXGU8Io6ZGX",
-  "audience": "https://test-mang.us.auth0.com/api/v2/"
+  "domain": "fiservseminars.us.auth0.com",
+  "clientId": "xn1dlePxY27alAd0ljNYWXMZqUBN8H84",
+  "audience": "https://fiservseminars.us.auth0.com/api/v2/"
 }

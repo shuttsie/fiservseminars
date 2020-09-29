@@ -373,6 +373,12 @@ h6 {
   border: none !important;
  }
  
+ .notes-container .note {
+   background:#ff6600;
+   color:#fff;
+   padding:1% 2%;
+   margin-top:5px;
+ }
  .nav-item.dropdown .dropdown-menu {
    right:0;
    left:unset;
@@ -483,4 +489,11 @@ span.dropdown---caret---3CkEt {
 }
 .ui.card .content {
   min-width:589px;
+}
+.meeting-video {
+  padding-bottom:10px;
+}
+.greetings img {
+  max-width:680px;
+  width:100%;
 }
