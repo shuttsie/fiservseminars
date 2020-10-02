@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import Sidenav from "../components/SideNav";
 import Chat from '../components/Chat/Chat';
-// import LiveVideo from '../components/LiveVideos/LiveVideo'
+import LiveVideoExample from '../components/LiveVideos/LiveVideoExample'
 import { withAuthenticationRequired } from "@auth0/auth0-react";
 import Loading from "../components/Loading";
 import Notes from '../components/Notes'
@@ -20,7 +20,7 @@ const Meetings = () => (
             <section className='left meetings'>
               <div className='meeting-video'>
                 <h1>Video</h1>
-                  {/* <LiveVideo/> */}
+                  <LiveVideoExample/>
               </div>
               <div className='chat'>
                 <Notes />
