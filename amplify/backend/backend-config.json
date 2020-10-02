@@ -1,0 +1,10 @@
+{
+	"auth": {
+		"precisionsignup7ce65020": {
+			"service": "Cognito",
+			"providerPlugin": "awscloudformation",
+			"dependsOn": [],
+			"customAuth": false
+		}
+	}
+}
