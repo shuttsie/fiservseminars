@@ -1,23 +1,5 @@
-//Polyfill files needed for IE support
-import "core-js/stable";
-import "regenerator-runtime/runtime";
-import 'core-js/features/object/assign';
-import 'core-js/features/string/ends-with';
-import 'core-js/features/string/starts-with';
-import 'core-js/features/string/includes';
-import 'core-js/features/array/includes';
-import 'core-js/features/array/find';
-import 'core-js/features/array/map';
-import 'core-js/features/number/is-finite';
-import 'core-js/es/set';
-import 'core-js/es/map';
-import 'react-app-polyfill/ie9';
-import 'react-app-polyfill/stable';
-import 'react-app-polyfill/ie11'
-
 import React from "react";
 import ReactDOM from "react-dom";
-
 import "./index.css";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";

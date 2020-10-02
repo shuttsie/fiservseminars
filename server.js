@@ -1,19 +1,3 @@
-<<<<<<< HEAD
-const express = require("express");
-const morgan = require("morgan");
-const helmet = require("helmet");
-const { join } = require("path");
-
-const app = express();
-
-const port = process.env.SERVER_PORT || 3000;
-
-app.use(morgan("dev"));
-app.use(helmet());
-app.use(express.static(join(__dirname, "build")));
-
-app.listen(port, () => console.log(`Server listening on port ${port}`));
-=======
 const express = require('express');
 const path = require('path');
 const bodyParser = require("body-parser");
@@ -54,4 +38,3 @@ app.set('port', (process.env.PORT || 5000));
 app.listen(app.get('port'), function() {
     console.log('Node app is running on port', app.get('port'));
 });
->>>>>>> test

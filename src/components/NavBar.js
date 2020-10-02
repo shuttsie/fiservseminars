@@ -1,12 +1,6 @@
-<<<<<<< HEAD
-import React, { useState } from "react";
-import { NavLink as RouterNavLink }from "react-router-dom";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-=======
 import React, { useState } from 'react';
 import { NavLink as RouterNavLink } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
->>>>>>> test
 
 import {
   Collapse,
@@ -22,20 +16,6 @@ import {
   DropdownToggle,
   DropdownMenu,
   DropdownItem,
-<<<<<<< HEAD
-} from "reactstrap";
-
-import { useAuth0 } from "@auth0/auth0-react";
-
-const NavBar = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const {
-    user,
-    isAuthenticated,
-    loginWithRedirect,
-    logout,
-  } = useAuth0();
-=======
 } from 'reactstrap';
 
 import { useAuth0 } from '@auth0/auth0-react';
@@ -43,7 +23,6 @@ import { useAuth0 } from '@auth0/auth0-react';
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const { user, isAuthenticated, loginWithRedirect, logout } = useAuth0();
->>>>>>> test
   const toggle = () => setIsOpen(!isOpen);
 
   const logoutWithRedirect = () =>
@@ -52,78 +31,6 @@ const NavBar = () => {
     });
 
   return (
-<<<<<<< HEAD
-    <div className="nav-container">
-      <Navbar color="light" dark expand="md">
-        <Container>
-          <a href="/"><NavbarBrand className="logo" /></a>
-          <NavLink
-            // href="http://localhost:3000"
-            href="https://precision.fiservseminars.com"
-            exact
-            activeClassName="router-link-exact-active"
-          >
-            Welcome
-          </NavLink>
-          <NavLink
-            // href="http://localhost:3000/dates-and-locations"
-            href="https://precision.fiservseminars.com/dates"
-            exact
-            activeClassName="router-link-exact-active"
-          >
-            Dates
-          </NavLink>
-          <NavLink
-            href="http://virtualtrainer.fiservapps.com/TrainGuides/2020/2020_EducationSeminar_Precision_OverviewandAgenda.pdf"
-            target="_blank"
-            exact
-            activeClassName="router-link-exact-active"
-          >
-            Agenda
-          </NavLink>
-          <NavLink
-            // href="http://localhost:3000/faqs"
-            href="https://precision.fiservseminars.com/faqs"
-            exact
-            activeClassName="router-link-exact-active"
-          >
-            FAQs
-          </NavLink>
-          <NavLink
-            // href="http://localhost:3000/contact-us"
-            href="https://precision.fiservseminars.com/contact-us"
-            exact
-            activeClassName="router-link-exact-active"
-          >
-            Contact Us
-          </NavLink>
-          <NavbarToggler onClick={toggle} />
-          <Collapse isOpen={isOpen} navbar>
-            <Nav className="d-none d-md-block" navbar>
-              {!isAuthenticated && (
-                <NavItem>
-                  <Button
-                    id="qsRegisterBtn"
-                    color="primary"
-                    className="btn-margin"
-                    onClick={() => loginWithRedirect()}
-                  >
-                    Register
-                  </Button>
-                </NavItem>
-              )}    
-            </Nav>
-            {!isAuthenticated && (
-              <Nav className="d-md-none" navbar>
-                <NavItem>
-                  <Button
-                    id="qsRegisterBtn"
-                    color="primary"
-                    block
-                    onClick={() => loginWithRedirect()}
-                  >
-                    Register
-=======
     <div className='nav-container'>
       <Navbar color='light' light expand='md'>
         <nav className='navbar navbar-expand announcement'>
@@ -191,39 +98,17 @@ const NavBar = () => {
                     onClick={() => loginWithRedirect({})}
                   >
                     Log in
->>>>>>> test
                   </Button>
                 </NavItem>
               </Nav>
             )}
             {isAuthenticated && (
               <Nav
-<<<<<<< HEAD
-                className="d-md-none justify-content-between"
-=======
                 className='d-md-none justify-content-between'
->>>>>>> test
                 navbar
                 style={{ minHeight: 170 }}
               >
                 <NavItem>
-<<<<<<< HEAD
-                  <span className="user-info">
-                    <img
-                      src={user.picture}
-                      alt="Profile"
-                      className="nav-user-profile d-inline-block rounded-circle mr-3"
-                      width="50"
-                    />
-                    <h6 className="d-inline-block">{user.name}</h6>
-                  </span>
-                </NavItem>
-                <NavItem>
-                  <FontAwesomeIcon icon="user" className="mr-3" />
-                  <RouterNavLink
-                    to="/profile"
-                    activeClassName="router-link-exact-active"
-=======
                   <span className='user-info'>
                     <img
                       src={user.picture}
@@ -239,23 +124,15 @@ const NavBar = () => {
                   <RouterNavLink
                     to='/profile'
                     activeClassName='router-link-exact-active'
->>>>>>> test
                   >
                     Profile
                   </RouterNavLink>
                 </NavItem>
                 <NavItem>
-<<<<<<< HEAD
-                  <FontAwesomeIcon icon="power-off" className="mr-3" />
-                  <RouterNavLink
-                    to="#"
-                    id="qsLogoutBtn"
-=======
                   <FontAwesomeIcon icon='power-off' className='mr-3' />
                   <RouterNavLink
                     to='#'
                     id='qsLogoutBtn'
->>>>>>> test
                     onClick={() => logoutWithRedirect()}
                   >
                     Log out
