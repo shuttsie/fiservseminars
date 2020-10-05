@@ -10,8 +10,8 @@ class Left extends Component {
             <div className="greetings">
               <img
               class='mb-3 app-logo'
-              src='https://precision.fiservseminars.com/static/media/header.bcc4edba.png'
-              alt='React logo'
+              src='https://fiservseminars-media.s3.amazonaws.com/header.png'
+              alt='2020 Precision Fall Conference'
               width=''
             />
             </div>

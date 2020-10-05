@@ -409,6 +409,7 @@ h6 {
   margin-right:10px;
   border-radius: 0 0 2px 2px;
   border: 2px solid #d3d3d3;
+  width:100%;
  }
  
  .notes-container .note {
@@ -440,6 +441,11 @@ h6 {
    left:unset;
  }
 
+ .placeholderImage {
+   background:url("https://fiservseminars-media.s3.amazonaws.com/coming-soon.jpg");
+   height:100%;
+   width:100%;
+ }
  /*UI Overrides*/
  .ui.padded.two.column.grid {
    background:rgba(255,255,255,.6);

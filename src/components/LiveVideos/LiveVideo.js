@@ -1,50 +1,104 @@
-import React, {useEffect, useRef} from 'react';
+import React, { useEffect, useRef, useState } from 'react';
+import StreamPlayer from './streamplayer';
+import './player.css';
 
+const feedJSON = `${process.env.PUBLIC_URL}/feed.json`;
 
-function LiveVideo(options) {
-    const divEl = useRef(null);
-    const videoEl = useRef(null);
+function LiveVideo () {
+    
+    const { IVSPlayer } = window;
+    const { isPlayerSupported } = IVSPlayer;
+  
+    const [streams, setStreams] = useState([]);
+  
+    const [activeStreamId, setActiveStreamId] = useState();
+    const [loading, setLoading] = useState(false);
+    const [visibleVideos, setVisibleVideos] = useState([]);
 
+    const player = useRef(null);
     useEffect(() => {
+        async function fetchStreams() {
+          const response = await fetch(feedJSON);
+          const data = await response.json();
+    
+          setStreams(data.streams);
+        }
+    
+        fetchStreams();
+      }, []);
+  useEffect(() => {
+    const { ENDED, PLAYING, READY } = IVSPlayer.PlayerState;
+    const { ERROR } = IVSPlayer.PlayerEventType;
 
-            const script = document.createElement('script');
+    if (!isPlayerSupported) {
+      console.warn(
+        'The current browser does not support the Amazon IVS player.',
+      );
 
-            script.src = 'https://player.live-video.net/1.0.0/amazon-ivs-player.min.js';
-            script.async = true;
+      return;
+    }
 
-            document.body.appendChild(script);
+    const onStateChange = () => {
+      const newState = player.current.getState();
 
-            script.onload = () => {
-                // eslint-disable-next-line no-undef
-                if (IVSPlayer.isPlayerSupported) {
-                    // eslint-disable-next-line no-undef
-                    const player = IVSPlayer.create();
-                    player.attachHTMLVideoElement(document.getElementById('video-player'));
-                    player.load("https://ca351d1575ab.us-east-1.playback.live-video.net/api/video/v1/us-east-1.076005434014.channel.bQ1l9LwPytZA.m3u8");
-                    player.play();
-                }
-            }
+      console.log(`Player State - ${newState}`);
 
-            return () => {
-                document.body.removeChild(script);
-            }
+      setLoading(newState !== PLAYING);
+    };
 
-        },
-        []
-    )
+    const onError = (err) => {
+      console.warn('Player Event - ERROR:', err);
+    };
 
+    player.current = IVSPlayer.create();
+
+    player.current.addEventListener(READY, onStateChange);
+    player.current.addEventListener(PLAYING, onStateChange);
+    player.current.addEventListener(ENDED, onStateChange);
+    player.current.addEventListener(ERROR, onError);
+
+    return () => {
+      player.current.removeEventListener(READY, onStateChange);
+      player.current.removeEventListener(PLAYING, onStateChange);
+      player.current.removeEventListener(ENDED, onStateChange);
+      player.current.removeEventListener(ERROR, onError);
+    };
+  }, [IVSPlayer, isPlayerSupported]);
+
+  const setStream = (id, visible) => {
+    const index = visibleVideos.indexOf(id);
+
+    if (index > -1 && visible) return;
+
+    let videos = [...visibleVideos];
+
+    if (visible) {
+      videos.push(id);
+    } else {
+      videos.splice(index, 1);
+    }
+
+    setLoading(true);
+    setVisibleVideos(videos);
+    setActiveStreamId(videos[videos.length - 1]);
+  };
+
+  if (!isPlayerSupported) {
+    return null;
+  }
     return (
-        <div ref={divEl}>
-            <video
-                id="video-player"
-                ref={videoEl}
-                playsInline
-                autoPlay
-                height={400}
-                width={700}
-                controls
-            />
-        </div>
+        <div className="feed">
+        {streams.map((stream) => (
+          <StreamPlayer
+            key={stream.id}
+            active={stream.id === activeStreamId}
+            loading={stream.id === activeStreamId && loading}
+            player={player.current}
+            streamData={stream}
+            setStream={setStream}
+          />
+        ))}
+      </div>
     );
 }
 
