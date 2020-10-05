@@ -1,5 +1,4 @@
 import React, { useEffect, useRef, useState } from 'react';
-import Placeholder from './placeholder'
 
 import { isElementInViewport } from './utils';
 import { VolumeOff, VolumeUp } from '../../assets/icons';
@@ -59,27 +58,20 @@ const StreamPlayer = (props) => {
     setMuted(muteNext);
   };
 
-//   const { state, startTime } = stream;
-
   return (
     <div className={`stream-wrapper${active ? ' stream-wrapper--active' : ''}`}>
       <div className="aspect-16x9">
         <div className="player-ui">
-          <video className="player-video-el" ref={videoEl} playsInline muted />
+          <video className="player-video-el" ref={videoEl} playsInline />
 
-          {!loading && (
+          {/* {!loading && (
             <div className="player-ui-actions">
               <button className="player-ui-button" onClick={toggleMute}>
                 {muted ? <VolumeOff /> : <VolumeUp />}
               </button>
             </div>
-          )}
+          )} */}
         </div>
-
-        <Placeholder
-          isActive={active}
-          playing={active && !loading}
-        />
       </div>
     </div>
   );
