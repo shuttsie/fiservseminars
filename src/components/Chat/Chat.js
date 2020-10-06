@@ -29,7 +29,7 @@ const Chat = () => {
     name = `${user.nickname}`;
   }
   useEffect(() => {
-    socket = io("ws://fiserv-chat-server.herokuapp.com/", {
+    socket = io("wss://fiserv-chat-server.herokuapp.com/", {
       transports: ['websocket'],
     });
 
