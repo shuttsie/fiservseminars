@@ -29,7 +29,10 @@ const Chat = () => {
     name = `${user.nickname}`;
   }
   useEffect(() => {
-    socket = io(ENDPOINT);
+    socket = io(ENDPOINT, {
+      path: '/socket.io',
+      transports: ['websocket'],
+    });
 
     socket.emit('join', { name, room }, (error) => {
       if (error) {
