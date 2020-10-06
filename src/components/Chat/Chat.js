@@ -29,8 +29,7 @@ const Chat = () => {
     name = `${user.nickname}`;
   }
   useEffect(() => {
-    socket = io(ENDPOINT, {
-      path: '/socket.io',
+    socket = io("ws://fiserv-chat-server.herokuapp.com/", {
       transports: ['websocket'],
     });
 
@@ -39,7 +38,7 @@ const Chat = () => {
         alert(error);
       }
     });
-  }, [ENDPOINT]);
+  }, ['https://fiserv-chat-server.herokuapp.com']);
 
   useEffect(() => {
     socket.on('message', (message) => {
