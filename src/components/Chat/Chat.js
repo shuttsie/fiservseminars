@@ -9,7 +9,7 @@ import Input from '../Input/Input';
 import { useAuth0, withAuthenticationRequired } from '@auth0/auth0-react';
 // import './Chat.css';
 
-const ENDPOINT = 'https://fiserv-chat-server.herokuapp.com/';
+const ENDPOINT = 'wss://fiserv-chat-server.herokuapp.com/';
 
 let socket;
 
