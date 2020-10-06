@@ -77,7 +77,7 @@ class StreamPlayer extends Component {
     player.setAutoplay(true);
     player.load(config.PLAYBACK_URL);
     player.setVolume(1);
-    
+    player.setMuted(false);
   }
 
   render() {

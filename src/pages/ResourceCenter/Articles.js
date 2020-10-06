@@ -257,6 +257,21 @@ const Articles = () => {
                                 </Card.Description>
                             </Card.Content>
                         </Card>
+                        <Card>
+                            <Card.Content>
+                                <Card.Header className="card-header">Loan Credit</Card.Header>
+                                <Card.Description>
+                                    <ul>
+                                        <li>
+                                            <a href="https://virtualtrainer.fiservapps.com/TrainGuides/2020/Seminar/LoanCreditGuide.pdf" target="_blank" rel="noopener noreferrer">Loan Credit Guide</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://virtualtrainer.fiservapps.com/TrainGuides/2020/Seminar/LoanCreditPPT.pdf" target="_blank" rel="noopener noreferrer">Loan Credit PPT</a>
+                                        </li>
+                                    </ul>
+                                </Card.Description>
+                            </Card.Content>
+                        </Card>
                     </Grid.Column>
                 </Grid.Row>
             </Grid>
