@@ -1,88 +1,99 @@
-import React, { useEffect, useRef, useState } from 'react';
-import Placeholder from './placeholder'
+// Copyright Amazon.com, Inc. or its affiliates. All Rights Reserved.
+// SPDX-License-Identifier: MIT-0
 
-import { isElementInViewport } from './utils';
-import { VolumeOff, VolumeUp } from '../../assets/icons';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import * as config from '../../video_config';
 
-const StreamPlayer = (props) => {
-  const { active, loading, player, streamData, setStream } = props;
-  const { id, stream, metadata } = streamData;
 
-  const [muted, setMuted] = useState(false);
+class StreamPlayer extends Component {
+  constructor() {
+    super ();
+    this.state = {
+      maxMetaData: 10,
+      metaData: [],
+    }
+  }
 
-  const videoEl = useRef(null);
-  const visibleRef = useRef(false);
+  componentDidMount() {
+    const mediaPlayerScript = document.createElement("script");
+    mediaPlayerScript.src = "https://player.live-video.net/1.0.0/amazon-ivs-player.min.js";
+    mediaPlayerScript.async = true;
+    mediaPlayerScript.onload = () => this.mediaPlayerScriptLoaded();
+    document.body.appendChild(mediaPlayerScript);
+  }
 
-  // handle case when autoplay with sound is blocked by browser
-  useEffect(() => {
-    if (!active || loading) return;
+  mediaPlayerScriptLoaded = () => {
+    // This shows how to include the Amazon IVS Player with a script tag from our CDN
+    // If self hosting, you may not be able to use the create() method since it requires
+    // that file names do not change and are all hosted from the same directory.
 
-    setMuted(player.isMuted());
-  }, [active, loading, player]);
+    const MediaPlayerPackage = window.IVSPlayer;
 
-  useEffect(() => {
-    if (!active) return;
+    // First, check if the browser supports the Amazon IVS player.
+    if (!MediaPlayerPackage.isPlayerSupported) {
+        console.warn("The current browser does not support the Amazon IVS player.");
+        return;
+    }
 
-    player.pause();
+    const PlayerState = MediaPlayerPackage.PlayerState;
+    const PlayerEventType = MediaPlayerPackage.PlayerEventType;
 
-    player.attachHTMLVideoElement(videoEl.current);
-    player.load(stream.playbackUrl);
+    // Initialize player
+    const player = MediaPlayerPackage.create();
+    player.attachHTMLVideoElement(document.getElementById("video-player"));
 
-    player.play();
-  }, [player, active, stream.playbackUrl]);
+    // Attach event listeners
+    player.addEventListener(PlayerState.PLAYING, () => {
+        console.log("Player State - PLAYING");
+    });
+    player.addEventListener(PlayerState.ENDED, () => {
+        console.log("Player State - ENDED");
+    });
+    player.addEventListener(PlayerState.READY, () => {
+        console.log("Player State - READY");
+    });
+    player.addEventListener(PlayerEventType.ERROR, (err) => {
+        console.warn("Player Event - ERROR:", err);
+    });
+    player.addEventListener(PlayerEventType.TEXT_METADATA_CUE, (cue) => {
+        console.log('Timed metadata: ', cue.text);
+        const metadataText = JSON.parse(cue.text);
+        const productId = metadataText['productId'];
+        this.props.setMetadataId(productId);
+        const metadataTime = player.getPosition().toFixed(2);
 
-  useEffect(() => {
-    const onVisibilityChange = () => {
-      const visible = isElementInViewport(videoEl.current);
+        const { metaData, maxMetaData } = this.state;
+        // only keep max 5 metadata records
+        if (metaData.length > maxMetaData) {
+          metaData.length = maxMetaData;
+        }
+        // insert new metadata
+        metaData.unshift(`productId: ${productId} (${metadataTime}s)`);
+        this.setState({ metaData });
+    });
 
-      if (visible === visibleRef.current) return;
+    // Setup stream and play
+    player.setAutoplay(true);
+    player.load(config.PLAYBACK_URL);
+    player.setVolume(1);
+    
+  }
 
-      visibleRef.current = visible;
-      setStream(id, visible);
-    };
-
-    onVisibilityChange();
-
-    window.addEventListener('scroll', onVisibilityChange);
-    window.addEventListener('resize', onVisibilityChange);
-
-    return () => {
-      window.removeEventListener('scroll', onVisibilityChange);
-      window.removeEventListener('resize', onVisibilityChange);
-    };
-  }, [id, setStream]);
-
-  const toggleMute = () => {
-    const muteNext = !player.isMuted();
-
-    player.setMuted(muteNext);
-    setMuted(muteNext);
-  };
-
-//   const { state, startTime } = stream;
-
-  return (
-    <div className={`stream-wrapper${active ? ' stream-wrapper--active' : ''}`}>
-      <div className="aspect-16x9">
-        <div className="player-ui">
-          <video className="player-video-el" ref={videoEl} playsInline muted />
-
-          {!loading && (
-            <div className="player-ui-actions">
-              <button className="player-ui-button" onClick={toggleMute}>
-                {muted ? <VolumeOff /> : <VolumeUp />}
-              </button>
-            </div>
-          )}
+  render() {
+    return (
+      <div className="player-wrapper">
+        <div className="aspect-169 pos-relative full-width full-height">
+          <video id="video-player" className="video-elem pos-absolute full-width" playsInline controls autoplay preload="auto" muted="false" oncanplay="this.muted=false"></video>
         </div>
-
-        <Placeholder
-          isActive={active}
-          playing={active && !loading}
-        />
       </div>
-    </div>
-  );
+    )
+  }
+}
+
+StreamPlayer.propTypes = {
+  setMetadataId: PropTypes.func,
+  videoStream: PropTypes.string,
 };
 
 export default StreamPlayer;

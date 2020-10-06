@@ -87,18 +87,9 @@ function LiveVideo () {
     return null;
   }
     return (
-        <div className="feed">
-        {streams.map((stream) => (
-          <StreamPlayer
-            key={stream.id}
-            active={stream.id === activeStreamId}
-            loading={stream.id === activeStreamId && loading}
-            player={player.current}
-            streamData={stream}
-            setStream={setStream}
-          />
-        ))}
-      </div>
+      <div className="App full-width full-height">
+        <StreamPlayer />
+    </div>
     );
 }
 

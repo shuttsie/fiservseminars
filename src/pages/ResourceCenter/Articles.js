@@ -213,6 +213,25 @@ const Articles = () => {
                         </Card>
                         <Card>
                             <Card.Content>
+                                <Card.Header className="card-header">Demystifying AI</Card.Header>
+                                <Card.Description>
+                                    <ul>
+                                        <li>
+                                            <a href="https://virtualtrainer.fiservapps.com/TrainGuides/2020/Seminar/VirtualBankingAssistantBrochure.pdf" target="_blank" rel="noopener noreferrer">Virtual Banking Assistant Brochure</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://virtualtrainer.fiservapps.com/TrainGuides/2020/Seminar/VirtualBankingAssistant-AI-drivenConversationalExperiencesOnePager.pdf" target="_blank" rel="noopener noreferrer">Virtual Banking Assistant One Pager</a>
+                                        </li>
+                                    </ul>
+                                </Card.Description>
+                            </Card.Content>
+                        </Card>
+                    </Grid.Column>
+                </Grid.Row>
+                <Grid.Row>
+                    <Grid.Column className="article-block">
+                        <Card>
+                            <Card.Content>
                                 <Card.Header className="card-header">Precision Roadmap</Card.Header>
                                 <Card.Description>
                                     <ul>
@@ -223,21 +242,16 @@ const Articles = () => {
                                 </Card.Description>
                             </Card.Content>
                         </Card>
-                        
-                    </Grid.Column>
-                </Grid.Row>
-                <Grid.Row>
-                    <Grid.Column className="article-block">
                         <Card>
                             <Card.Content>
-                                <Card.Header className="card-header">Demystifying AI</Card.Header>
+                                <Card.Header className="card-header">Loan Parameters</Card.Header>
                                 <Card.Description>
                                     <ul>
                                         <li>
-                                            <a href="https://virtualtrainer.fiservapps.com/TrainGuides/2020/Seminar/VirtualBankingAssistantBrochure.pdf" target="_blank" rel="noopener noreferrer">Virtual Banking Assistant Brochure</a>
+                                            <a href="https://virtualtrainer.fiservapps.com/TrainGuides/2020/Seminar/LoanParametersGuide.pdf" target="_blank" rel="noopener noreferrer">Loan Parameters Guide</a>
                                         </li>
                                         <li>
-                                            <a href="https://virtualtrainer.fiservapps.com/TrainGuides/2020/Seminar/VirtualBankingAssistant-AI-drivenConversationalExperiencesOnePager.pdf" target="_blank" rel="noopener noreferrer">Virtual Banking Assistant One Pager</a>
+                                            <a href="https://virtualtrainer.fiservapps.com/TrainGuides/2020/Seminar/LoanParametersPPT.pdf" target="_blank" rel="noopener noreferrer">Loan Parameters PPT</a>
                                         </li>
                                     </ul>
                                 </Card.Description>
