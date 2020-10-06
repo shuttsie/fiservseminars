@@ -449,7 +449,7 @@ h6 {
  video#video-player {
    width:100%;
  }
- .video-js.video-player {
+ .video-js.video-player.video-js.vjs-4-3 {
    padding-top:60%;
  }
  /*UI Overrides*/
