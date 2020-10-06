@@ -11,7 +11,7 @@ function LiveVideo() {
           </Helmet>
         </div>
         <div className="video-container">
-          <video id="amazon-ivs-videojs" className="video-js vjs-4-3 vjs-big-play-centered" controls autoPlay></video>
+          <video id="amazon-ivs-videojs" className="video-js vjs-4-3 vjs-big-play-centered video-player" controls autoPlay></video>
         </div>
       </div>
     );

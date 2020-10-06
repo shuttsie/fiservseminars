@@ -12,5 +12,9 @@
         console.log('Player is ready to use!');
         // Play stream
         player.src(PLAYBACK_URL);
+        player.setAutoplay(true);
+        player.setVolume(1);
+        player.muted(false);
     });
+
 })();

@@ -449,6 +449,9 @@ h6 {
  video#video-player {
    width:100%;
  }
+ .video-js.video-player {
+   padding-top:60%;
+ }
  /*UI Overrides*/
  .ui.padded.two.column.grid {
    background:rgba(255,255,255,.6);
