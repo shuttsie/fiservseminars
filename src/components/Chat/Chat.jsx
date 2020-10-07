@@ -15,7 +15,8 @@ class Chat extends Component {
     this.state = {
       metadataId: null,
       showSignIn: false,
-      username: '',
+      user: '',
+      name: '',
       message: '',
       messages: [],
       connection: null
@@ -42,12 +43,14 @@ class Chat extends Component {
       // append received message from the server to the DOM element 
       const messages = this.state.messages;
       const data = event.data.split('::');
-      const username = data[0];
+      const { user } = this.props.auth0;
+      const name = `${user.nickname}`;
+      // const username = data[0];
       const message = data.slice(1).join('::'); // in case the message contains the separator '::'
 
       messages.push({
         timestamp: Date.now(),
-        username,
+        name,
         message
       });
 
@@ -65,13 +68,13 @@ class Chat extends Component {
     this.messagesEndRef.current.scrollIntoView({ behavior: 'smooth' })
   }
 
-  updateUsername = username => {
-    this.setState({ username, showSignIn: false }, () => this.chatRef.current.focus());
+  updateUsername = name => {
+    this.setState({ name, showSignIn: false }, () => this.chatRef.current.focus());
   }
 
   handleOnClick = () => {
-    const { username } = this.state;
-    if (!username) {
+    const { name } = this.state;
+    if (!name) {
       this.setState({ showSignIn: true });
     }
   }
@@ -82,11 +85,11 @@ class Chat extends Component {
 
   handleKeyDown = (e) => {
     if (e.keyCode === 13) { // keyCode 13 is carriage return
-      const { username, message, connection } = this.state;
+      const { name, message, connection } = this.state;
       if (message) {
         const data = `{
           "action": "sendmessage",
-          "data": "${username}::${message.replace(/\\/g, '\\\\').replace(/"/g, '\\"')}"
+          "data": "${name}::${message.replace(/\\/g, '\\\\').replace(/"/g, '\\"')}"
         }`;
         connection.send(data);
         
@@ -110,6 +113,7 @@ class Chat extends Component {
   renderMessages = () => {
     const { messages } = this.state;
     const { user } = this.props.auth0;
+    console.log(messages);
     return (
       messages.map(message => {
         let formattedMessage = this.parseUrls(message.message);
