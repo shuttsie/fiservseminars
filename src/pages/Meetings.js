@@ -19,17 +19,11 @@ const Meetings = () => (
           <div className="meetings-sections">
             <section className='left meetings'>
               <div className='meeting-video'>
-                <h1>Video</h1>
-                  {/* <LiveVideo/> */}
                   <Chat />
               </div>
               <div className='chat'>
                 <Notes />
               </div>
-            </section>
-            <section className="right meetings">
-            <h1>Chat</h1>
-                
             </section>
           </div>
           

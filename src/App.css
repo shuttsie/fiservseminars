@@ -308,7 +308,9 @@ h6 {
   pointer-events:pointer;
   cursor: pointer;
 }
-
+.left.meetings {
+  width:100%;
+}
 .meeting-content {
   background: rgba(0,0,0,.75);
     border-left: 10px solid #f60;
@@ -452,6 +454,25 @@ h6 {
  .video-js.video-player.video-js.vjs-4-3 {
    padding-top:60%;
  }
+
+.player-wrapper {
+  width:60%;
+  padding:0 10px;
+}
+.chat-wrapper {
+  width:40%;
+  padding:0 10px;
+}
+.chat-container {
+  border-radius: 0 0 2px 2px;
+  border: 2px solid #d3d3d3;
+  padding:10px;
+}
+.composer {
+  display: flex;
+  flex-direction: column;
+  align-self: flex-end;
+}
  /*UI Overrides*/
  .ui.padded.two.column.grid {
    background:rgba(255,255,255,.6);

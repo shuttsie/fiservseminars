@@ -84,6 +84,9 @@ class VideoPlayer extends Component {
   render() {
     return (
       <div className="player-wrapper">
+        <header>
+          <h1>Video</h1>
+        </header>
         <div className="aspect-169 pos-relative full-width full-height">
           <video id="video-player" className="video-elem pos-absolute full-width" playsInline muted></video>
         </div>
