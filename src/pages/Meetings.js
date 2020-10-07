@@ -20,7 +20,8 @@ const Meetings = () => (
             <section className='left meetings'>
               <div className='meeting-video'>
                 <h1>Video</h1>
-                  <LiveVideo/>
+                  {/* <LiveVideo/> */}
+                  <Chat />
               </div>
               <div className='chat'>
                 <Notes />
@@ -28,7 +29,7 @@ const Meetings = () => (
             </section>
             <section className="right meetings">
             <h1>Chat</h1>
-                <Chat />
+                
             </section>
           </div>
           
